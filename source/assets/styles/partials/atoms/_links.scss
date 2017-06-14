@@ -1,0 +1,9 @@
+a,
+.link {
+	@extend %link;
+
+	.link__utility {
+		@extend %link--utility;
+	}
+
+}

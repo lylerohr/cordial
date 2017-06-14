@@ -1,0 +1,147 @@
+/*******
+
+	Cordial Framework
+	Theme Configuration
+
+*******/
+
+
+/************************************
+
+	TYPOGRAPHY
+
+************************************/
+
+$font-imports: (
+	'Roboto': url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500'),
+	'Noto Serif': url('https://fonts.googleapis.com/css?family=Noto+Serif'),
+);
+
+// sets font stacks
+// font-family($font);
+$font-stack: (
+	text: "'Roboto', Helvetica, Arial, sans-serif",
+	display: #{'Noto Serif', 'Times New Roman', sans-serif},
+	code: #{'courier', monospace},
+	icons: #{'FontAwesome'},
+	cd--text: #{'Roboto', Helvetica, Arial, sans-serif},
+	cd--display: #{'Noto Serif', 'Times New Roman', sans-serif},
+	cd--code: #{'courier', monospace},
+);
+
+// sets relative base font sizes
+// unitless, DO NOT SET UNITS HERE
+// font-size($size);
+$font-sizes: (
+	monolithic: 6,
+	massive: 4,
+	giant: 2,
+	big: 1.5,
+	base: 1,
+	small: .875,
+	extra-small: .75
+);
+
+
+// line-height, unitless
+// mapped to breakpoints
+// lh($size);
+$lh: (
+  display: 1.1,
+  extra-small: 1.1,
+  small: 1.2,
+  base: 1.3,
+  large: 1.4,
+  extra-large: 1.45
+);
+
+/************************************
+
+	COLORS
+
+************************************/
+
+// Can take any valid color value - hex, rgb(), srgb(), etc.
+// Extendable - you can add/subtract as many colors as you need for your application
+// color($color, <$tone, $function>);
+
+$colors: (
+    brand-primary: #2F2933,
+    brand-secondary: #01A2A6,
+    brand-tertiary: #29D9C2,
+	brand-auxiliary: #FFFFA6,
+    cta: #BDF271,
+    gray: #777777,
+    black: #000000,
+    white: #ffffff,
+    transparent: srgb(255,255,255,0),
+);
+
+// Tone presets for colors
+// accepts number, utilizes the Sass lighten() and darken() functions
+// can be utilzed in the color() function
+// color($color, <$tone, $function>);
+$tones: (
+	extra-light: 20%,
+	light: 10%,
+	dark: 5%,
+	extra-dark: 20%
+);
+
+
+
+/************************************
+
+	DIMENSION
+
+************************************/
+
+// border($style, <$color>);
+$borders: (
+	none: none,
+	hairline: 1px solid,
+	thin: .1rem solid,
+	base: .15rem solid,
+	thick: .2rem solid,
+);
+
+// radius($size);
+$radius: (
+	none: 0,
+	small: .15rem,
+	base: .25rem,
+	large: .5rem,
+	circle: 50%,
+);
+
+// transition($speed);
+$transitions: (
+	none: 0ms,
+	base: 250ms,
+	extra-fast: 50ms,
+	fast: 100ms,
+	slow: 300ms,
+	extra-slow: 400ms,
+);
+
+// shadow($height, <$color>);
+$drop-shadows: (
+	flat: none,
+	base: 0 0 0,
+	raised: 0 1px 2px 0,
+	overlay: 0 4px 8px 0,
+	sticky-nav: 0 6px 12px 0,
+	temporary-nav: 	0 8px 16px 0,
+	pop-out: 0 12px 24px 0,
+);
+
+// text-shadow($height, <$color>);
+$text-shadows: (
+	flat: none,
+	base: 0 0 0,
+	raised: 0 1px 2px,
+	overlay: 0 4px 8px,
+	sticky-nav: 0 6px 12px,
+	temporary-nav: 	0 8px 16px,
+	pop-out: 0 12px 24px,
+);

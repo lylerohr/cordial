@@ -1,0 +1,73 @@
+// BUTTON PATTERNS
+
+// @extend %button
+$button-patterns: (
+	name:'button',
+	responsive-type: true,
+	display: inline-block,
+	margin: 0,
+	padding: padding(base) padding(extra-large),
+	white-space: nowrap,
+	vertical-align: middle,
+	font-family: font-family(text),
+	font-weight: inherit,
+	text-align: center,
+	color: color(brand-primary),
+	background-image: none,
+	background-color: transparent,
+	border: border(base, brand-primary),
+	border-radius: radius(base),
+	touch-action: manipulation,
+	cursor: pointer,
+	":hover": (
+		background-color: color(brand-secondary),
+		color: color(white),
+		border: border(base, brand-secondary),
+		transition: transition(fast),
+	),
+	":active": (
+		background-color: color(brand-secondary, dark),
+		color: color(white),
+		outline: none
+	),
+	elements: (),
+	modifiers: (
+		"--large": (
+			responsive-type: true,
+			size: big,
+			padding: padding(extra-large)*2 padding(extra-large)*4,
+		),
+		"--small": (
+			responsive-type: true,
+			size: small,
+			padding: padding(extra-small) padding(small),
+			":hover": (
+				background-color: green,
+			),
+			":active": (
+				background-color: red,
+			),
+		),
+		"--icon-left": (
+			responsive-type: true,
+			size: base,
+			":before": (
+				font-family: font-family(icons),
+				margin-right: margin(extra-small),
+				content: "",
+			),
+		),
+		"--icon-right": (
+			responsive-type: true,
+			size: base,
+			":after": (
+				font-family: font-family(icons),
+				margin-left: margin(extra-small),
+				content: "",
+			),
+		),
+	),
+);
+
+// Initialize the %constructor placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include construct($button-patterns);

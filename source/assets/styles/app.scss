@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/*! Cordial v0.1.3 | GPL 3.0 License | https://github.com/lylerohr/nuclear */
+
+/************************************
+
+	Cordial
+	Main Scss file
+
+	Cordial is a Sass and Atomic based framework that models the canonical
+	CSS Zen Garden minimalism and separation of scope.  The aim is to free
+	your markup form framework-specific classes and allow for full structural
+	and theme control via CSS.
+
+	Cordial utilizes the Brad Frost's, Atomic Design Methodology
+	(http://atomicdesign.bradfrost.com/) to organize absolutely everything.
+
+
+	TODO:
+	1. Create a nuclear-config.scss
+		> Allows user to include/exclude scss files using a map
+	2. Create a comment design pattern
+		> Fully comment code to act as initial documentation
+	3. Optimize constructor default output
+		> Optimize default placeholder classes
+
+
+************************************/
+
+// Font Imports
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Roboto:300,400,700');
+@import "../../bower_components/font-awesome/css/font-awesome.min.css";
+
+
+// Vendor libraries
+@import "../../bower_components/normalize-css/normalize.css";
+@import "../../bower_components/sassy-maps/sass/sassy-maps";
+
+// Optional grid
+//@import "../../bower_components/neat/core/neat";
+
+// Nuclear Sass
+@import "partials/libraries/libraries"; //must be first nuclear @import
+
+@import "partials/config/structure/scaffolding";
+@import "partials/config/theme/theme";
+
+@import "partials/atoms/atoms";
+@import "partials/molecules/molecules";
+@import "partials/organisms/organisms";
+@import "partials/pages/pages";
+@import "partials/templates/templates";
+
+// TESTING GROUND
+/* THE GOAL
+.block__button {
+	@extend %button;
+	@extend %button--large;
+	@extend %button--icon-left;
+	//unique styling
+	&::before {
+		content: "\f2b9";
+	}
+}
+*/

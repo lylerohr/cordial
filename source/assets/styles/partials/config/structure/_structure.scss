@@ -1,0 +1,12 @@
+html {
+	font-size: $scale !important;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+	margin: margin(large) margin(base);
+	clear: both;
+}

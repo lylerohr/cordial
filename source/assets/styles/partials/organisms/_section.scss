@@ -1,0 +1,50 @@
+.section {
+	margin: margin(base) margin(none);
+}
+
+.section__header,
+.section__body,
+.section__footer {
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+	position: relative;
+}
+
+.section__header {
+
+}
+
+.section__title {
+	@extend %section-title;
+	display: inline-block;
+	max-width: 65%;
+}
+
+.section__link--view-more {
+	@extend %link--view-more;
+	display: block;
+	text-align: left;
+	margin-top: margin(extra-small);
+
+	@include respond-to(small) {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);
+		margin-top: margin(none);
+	}
+}
+
+.section__body {
+	margin: margin(base) margin(none);
+}
+
+.section__footer {
+
+}
+
+.section__footer .section__link--view-more {
+	@extend %link--view-more;
+	position: relative;
+}

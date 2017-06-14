@@ -1,0 +1,24 @@
+// IMAGE PATTERNS
+
+// @extend %image
+$image-patterns: (
+	display: block,
+	margin: margin(none),
+	padding: padding(none),
+	text-align: left,
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
+	background-image: none,
+	background-color: transparent,
+	border: none,
+	white-space: normal,
+	size: base,
+	name: 'image',
+	font-family: font-family(text),
+	font-size: font-size(base),
+	color: color(gray, extra-dark),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include construct($image-patterns);

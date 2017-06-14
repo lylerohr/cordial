@@ -1,0 +1,120 @@
+// Menu Elements
+.cd--component__menu {
+	width:100%;
+	float: none;
+	@include respond-to(small) {
+		width: 16.666%;
+		float: left;
+		position: fixed;
+		height: 100vh;
+		border-right: 1px solid color(gray, 3%, lighten);
+	};
+
+	.container {
+		text-align: center;
+	}
+
+	.cd--masthead__client-logo {
+		max-width: 200px;
+		display: inline-block;
+	}
+
+	.cd--menu {
+		list-style: none;
+		padding: padding(none);
+		margin: margin(none);
+		li {
+
+			a {
+				display: block;
+				text-align: left;
+			}
+		}
+		.button--icon-left {
+			border: border(none);
+		}
+
+		.button--icon-left:before {
+			content: "\f061";
+		}
+	}
+}
+
+.cd--masthead__client-name {
+	@extend %heading--small;
+	font-weight: bold;
+}
+
+.cd--masthead__library-name {
+	display: block;
+}
+
+.cd--masthead__library-description {
+	@extend %text--small;
+}
+
+
+// Body Elements Descriptions
+.cd--component__body {
+	width: 100%;
+	float: none;
+
+	@include respond-to(small) {
+		width: 83.334%;
+		padding-left: 16.666%;
+		float: left;
+	};
+}
+
+.cd--page__header {
+	min-height: 150px;
+	background-color: color(brand-secondary);
+	padding: padding(base);
+	position: relative;
+
+	@include respond-to(small) {
+		margin-left: 16.666%;
+	}
+}
+
+.cd--page__title {
+	@extend %heading--massive;
+	margin: margin(none);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: color(white);
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+
+// Component
+.cd--component__column-header {
+	@extend %heading--small;
+}
+
+.cd--component__section-header {
+	@extend %heading--big;
+	font-weight: bold;
+	margin-top: margin(extra-large)*4;
+	background-color: color(gray, 52%, lighten);
+	padding: padding(large);
+}
+
+.cd--component__title {
+	@extend %small-caps;
+	font-weight: bold;
+	margin-top: margin(extra-large)*2;
+	margin-bottom: margin(extra-small);
+}
+
+.cd--component__wrapper {
+	border: 1px solid color(brand-primary, 75%, lighten);
+	border-radius: radius(base);
+	padding: padding(extra-large);
+	-moz-box-shadow: shadow(raised, color(brand-primary, 70%, lighten));
+	-webkit-box-shadow: shadow(raised, color(brand-primary, 70%, lighten));
+	box-shadow: shadow(raised, color(brand-primary, 70%, lighten));
+}

@@ -1,0 +1,98 @@
+// HEADINGS PATTERNS
+
+// @extend %headings
+$heading-patterns: (
+	display: block,
+	margin: margin(base) 0,
+	padding: 0,
+	text-align: left,
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
+	background-image: none,
+	background-color: transparent,
+	border: border(none),
+	white-space: normal,
+	name: 'heading', /* used to create placeholder class name */
+	font-family: font-family(display),
+	size: giant,
+	color: color(brand-primary),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include construct($heading-patterns);
+
+
+$heading-monolithic: (
+	name: 'heading--monolithic',
+	size: monolithic,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+);@include construct($heading-patterns, $heading-monolithic);
+
+$heading-massive: (
+	name: 'heading--massive',
+	size: massive,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+);@include construct($heading-patterns, $heading-massive);
+
+$heading-giant: (
+	name: 'heading--giant',
+	size: giant,
+	font-weight: 100,
+);@include construct($heading-patterns, $heading-giant);
+
+$heading-big: (
+	name: 'heading--big',
+	size: big,
+	font-weight: 100,
+);@include construct($heading-patterns, $heading-big);
+
+$heading-small: (
+	name: 'heading--small',
+	size: small,
+	font-weight: bold,
+	color: color(brand-primary, 15%, darken),
+);@include construct($heading-patterns, $heading-small);
+
+$heading-extrasmall: (
+	name: 'heading--extrasmall',
+	size: extra-small,
+	font-weight: bold,
+	color: color(brand-primary, 15%, darken),
+);@include construct($heading-patterns, $heading-extrasmall);
+
+
+// Special Headings
+$heading-with-subhead: (
+	name: 'heading-with-subhead',
+	size: giant,
+	margin: #{1rem 0 2rem},
+	font-weight: 500,
+	display: inline-block,
+);@include construct($heading-patterns, $heading-with-subhead);
+
+$subhead: (
+	name: 'subhead',
+	size: base,
+	display: inline-block,
+	font-weight: 100,
+	margin-left: 1rem,
+	color: color(gray, dark),
+);@include construct($heading-patterns, $subhead);
+
+$small-caps: (
+	name: 'small-caps',
+	size: small,
+	font-weight: 100,
+	text-transform: uppercase,
+	font-family: font-family(cd--text),
+);@include construct($heading-patterns, $small-caps);
+
+$section-title: (
+	name: 'section-title',
+	margin-top: margin(none),
+	margin-bottom: margin(none),
+	font-family: font-family(text),
+);@include construct($heading-patterns, $section-title);

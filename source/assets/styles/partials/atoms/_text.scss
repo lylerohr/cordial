@@ -1,0 +1,8 @@
+p {
+	@extend %text;
+	padding-bottom: padding(small);
+}
+
+pre {
+	@extend %text--code;
+}

@@ -1,0 +1,64 @@
+// LINK PATTERNS
+
+// @extend %link
+$link-patterns: (
+	display: inline,
+	margin: 0,
+	padding: 0,
+	text-align: left,
+	vertical-align: inherit,
+	touch-action: auto,
+	background-image: none,
+	background-color: transparent,
+	border: border(none),
+	transition: transition(base),
+	white-space: normal,
+	size: base,  /* can use for preset theming within constructor */
+	name: 'link', /* used to create placeholder class name */
+	font-family: font-family(text),
+	color: color(cta),
+	cursor: pointer,
+	text-decoration: none,
+	hover: (
+		color: color(cta, 30%, darken),
+	),
+	active: (
+		color: color(cta, dark),
+	),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include construct($link-patterns);
+
+
+// Text variations
+// @extend %<name>
+$utility-link: (
+	name: link--utility,
+	size: small,
+);@include construct($link-patterns, $utility-link);
+
+$view-link: (
+	name: link--view-more,
+	size: extra-small,
+	text-transform: uppercase,
+	font-weight: 400,
+);@include construct($link-patterns, $view-link);
+
+$link--icon-left: (
+	name: 'link--icon-left',
+	before: (
+		font-family: font-family(icons),
+		margin-right: margin(extra-small),
+		content: "",
+	),
+);@include construct($link-patterns, $link--icon-left);
+
+$link--icon-right: (
+	name: 'link--icon-right',
+	after: (
+		font-family: font-family(icons),
+		margin-left: margin(extra-small),
+		content: "",
+	),
+);@include construct($link-patterns, $link--icon-right);

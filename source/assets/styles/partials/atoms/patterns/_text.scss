@@ -1,0 +1,49 @@
+// TEXT PATTERNS
+
+// @extend %text
+$text-patterns: (
+	display: block,
+	margin: 0,
+	padding: 0,
+	font-weight: inherit,
+	text-align: left,
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
+	background-image: none,
+	background-color: transparent,
+	border: border(none),
+	white-space: normal,
+	size: base,  /* can use for preset theming within constructor */
+	name: 'text', /* used to create placeholder class name */
+
+
+	font-family: font-family(text),
+	color: color(gray, dark),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include construct($text-patterns);
+
+
+$text--small: (
+	name: 'text--small',
+	size: small,
+);@include construct($text-patterns, $text--small);
+
+$text--blockquote: (
+	name: 'text--blockquote',
+	size: big,
+	margin: margin(none),
+	padding: 1rem,
+	font-weight: 100,
+	background-color: color(gray, 50%, lighten),
+	border-radius: radius(large)
+);
+@include construct($text-patterns, $text--blockquote);
+
+$code: (
+	name: 'text--code',
+	font-family: font-family(code),
+	white-space: pre,
+);@include construct($text-patterns, $code);

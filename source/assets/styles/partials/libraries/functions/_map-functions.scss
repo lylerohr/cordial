@@ -1,0 +1,142 @@
+/*************************
+
+	MAP FUNCTIONS - STRUCTURE LAYER
+
+*************************/
+
+@function breakpoint($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+	 	@return map-get($breakpoints, $breakpoint);
+	 } @else {
+		 @warn "No such breakpoint - '#{$breakpoint}.";
+	 }
+}
+
+// z-index
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
+}
+
+@function margin($value) {
+	 @if map-has-key($margin, $value) {
+	 	@return map-get($margin, $value);
+	 } @else {
+		 @warn "No such margin value - '#{$value}.";
+	 }
+}
+
+@function padding($value) {
+	 @if map-has-key($padding, $value) {
+	 	@return map-get($padding, $value);
+	 } @else {
+		 @warn "No such padding value - '#{$value}.";
+	 }
+}
+
+/*************************
+
+	MAP FUNCTIONS - THEME LAYER
+
+*************************/
+
+
+// theme/olors
+@function color($color, $tone: null, $function: null) {
+    @if $tone == "extra-light" {
+	    @return lighten(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "light" {
+		 @return lighten(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "dark" {
+		 @return darken(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "extra-dark" {
+		@return darken(map-get($colors, $color), map-get($tones, $tone));
+	} @else if type-of($tone) == number {
+		@if $function == "lighten" {
+			@return lighten(map-get($colors, $color), $tone);
+		} @else if $function == "darken" {
+			@return darken(map-get($colors, $color), $tone);
+		}
+	} @else {
+		@return map-get($colors, $color);
+	}
+}
+
+// theme/type
+@function font-family($font) {
+	 @if map-has-key($font-stack, $font) {
+	 	@return map-get($font-stack, $font);
+	 } @else {
+		 @warn "No such font-family - '#{$font}.";
+	 }
+}
+
+@function font-size($size) {
+	@if map-has-key($font-sizes, $size) {
+		@return map-get($font-sizes, $size);
+	} @else {
+		@warn "No such font size - '#{$size}.";
+	}
+}
+
+@function heading-size($size) {
+	@if map-has-key($heading-sizes, $size) {
+		@return map-get($heading-sizes, $size);
+	} @else {
+		@warn "No such heading size - '#{$font}.";
+	}
+}
+
+@function lh($size) {
+	 @if map-has-key($lh, $size) {
+	 	@return map-get($lh, $size);
+	 } @else {
+		 @warn "No such lineheight size - '#{$size}.";
+	 }
+}
+
+@function transition($speed) {
+	 @if map-has-key($transitions, $speed) {
+	 	@return map-get($transitions, $speed);
+	 } @else {
+		 @warn "No such transition speed - '#{$speed}.";
+	 }
+}
+
+
+// theme/chrome/radius
+@function radius($size) {
+	 @if map-has-key($radius, $size) {
+	 	@return map-get($radius, $size);
+	 } @else {
+		 @warn "No such radius of size - '#{$size}.";
+	 }
+}
+
+@function border($style, $color: gray) {
+	 @if map-has-key($borders, $style) {
+	 	@return #{map-get($borders, $style) color($color)};
+	 } @else {
+		 @warn "No such radius of size - '#{$style}.";
+	 }
+}
+
+@function shadow($height, $color...) {
+	@if map-has-key($drop-shadows, $height) {
+	   @return #{map-get($drop-shadows, $height)} $color;
+	} @else {
+		@warn "No such drop shadow height of name - '#{$height}.";
+	}
+}
+
+@function text-shadow($height, $color) {
+	@if map-has-key($text-shadows, $height) {
+	   @return #{map-get($text-shadows, $height)} $color;
+	} @else {
+		@warn "No such text shadow height of name - '#{$height}.";
+	}
+}

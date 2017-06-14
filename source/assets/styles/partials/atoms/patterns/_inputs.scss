@@ -1,0 +1,61 @@
+// INPUT PATTERNS
+
+// @extend %inputs
+$input: (
+	font-family: font-family(text),
+	background-color: transparent,
+	border: border(thin, gray),
+	border-radius: radius(base),
+	transition: outline-color transition(fast),
+/*	property: value,
+*/
+);
+
+$input-focus: (
+	outline-color: color(brand-primary, 30%, lighten),
+);
+
+// Initialize the %input placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include input($input, $input-focus);
+
+/************************************
+	EO DEFAULT INPUT CONFIG
+************************************/
+
+
+/************************************
+
+	INPUT MODIFIERS
+
+	To create a new modifier, create a new input map.
+	The input map must contain a "name" key.
+
+	The input map may also contain the 'form-element' key and the 'element-type' key.
+		> 	'form-element' indicates the primary form tag (e.g. input, textarea, select, etc.)
+			and applies additional default styles to help it render properly.
+		> 	'input-type' is most useful for 'form-element: input' as it has many types
+			(e.g. text, date, radio, etc.)
+
+	To instantiate, @include the input() mixin with the fourth argument as your new input map.
+
+	Example:
+
+	$NEW-input: (
+		name: 'NEW-input',
+		form-element: INPUT,
+		element-type: TYPE,
+		css-property: value,
+	);
+	@include button($button, $button-hover, $button-active, $NEW-button);
+
+************************************/
+
+// Button variations
+// @extend %<name>
+$radio-input: (
+	name: 'input--radio',
+	form-element: input,
+	element-type: radio,
+	padding: padding(none),
+	margin: margin(base) margin(none),
+);@include input($input, $input-focus, $radio-input);
