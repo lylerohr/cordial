@@ -1,0 +1,13 @@
+input[type=radio],
+%radio-button {
+	line-height: rem(font-size(small));
+	font-family: font-family(text);
+	color: color(text);
+}
+
+%radio-button-label {
+	font-size: rem(font-size(small));
+	font-family: font-family(text);
+	line-height: rem(font-size(small));
+	color: color(text);
+}
