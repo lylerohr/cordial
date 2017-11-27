@@ -1,0 +1,67 @@
+/************************************
+
+	Cordial Framework
+	Component Constructor
+
+************************************/
+
+// constructor
+@mixin construct($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		name: 'component', /* used to create placeholder class name */
+		size: base, /* used to set default responsive-type() */
+		responsive-type: true,
+	), $default);
+	$modifier: extend($default, $modifier);
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@include pseudo-constructor($modifier); /* creates all pseudo classes & elements if passed in $modifier */
+		@include responsive-type($modifier); /* activates/deactivates responsive type */
+		@each $name, $value in $modifier {
+			//remove invalid css
+			@if $name != type and $name != name and $name != size and $name !=responsive-type and $name != modifiers and $name != elements and $name != type-style {
+				#{$name}: #{$value};
+			} @else if $name == elements {
+				@each $e-name, $e-value in map-get($modifier, $name) {
+					@at-root {
+						%#{map-get($modifier, name)}#{$e-name} {
+							@include pseudo-constructor(map-get-deep($modifier, $name, $e-name)); /* creates all pseudo classes & elements if passed in $modifier */
+							@include responsive-type(map-get-deep($modifier, $name, $e-name)); /* activates/deactivates responsive type */
+							@each $property, $value in map-get-deep($modifier, $name, $e-name) {
+								@if $property != type and $property != name and $property != size and $property !=responsive-type and $property != type-style {
+								/*	@if $property == modifiers {
+										@each $p, $v in map-get-deep($modifier, $name, $e-name, $property) {
+											&map-get-deep($modifier, $name, $e-name, $property) {
+												#{$p}: #{$v};
+											}
+										}
+									} @else {
+										#{$property}: #{$value};
+									}
+								*/
+									#{$property}: #{$value};
+								}
+							}
+						}
+					}
+				}
+			} @else if $name == modifiers {
+				@each $m-name, $m-value in map-get($modifier, $name) {
+					@at-root {
+						%#{map-get($modifier, name)}#{$m-name} {
+							//@extend %#{map-get($modifier, name)};
+							@include pseudo-constructor(map-get-deep($modifier, $name, $m-name)); /* creates all pseudo classes & elements if passed in $modifier */
+							@include responsive-type(map-get-deep($modifier, $name, $m-name)); /* activates/deactivates responsive type */
+							@each $x, $y in map-get-deep($modifier, $name, $m-name) {
+								@if $x != type and $x != name and $x != size and $x !=responsive-type and $x != type-style {
+									#{$x}: #{$y};
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

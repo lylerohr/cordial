@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	font-size: inherit;
+	color: inherit;
+	font-weight: normal;
+	@extend %heading;
+}
+
+h1 {
+	@extend %heading--massive;
+}
+
+h2 {
+	@extend %heading--extra-large;
+}
+
+h3 {
+	@extend %heading--large;
+}
+
+h4 {
+	@extend %heading--small;
+}
+
+h5 {
+	@extend %heading--extra-small;
+}
+
+h6 {
+	@extend %heading--tiny;
+}

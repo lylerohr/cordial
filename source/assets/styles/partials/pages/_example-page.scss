@@ -1,0 +1,25 @@
+.page-content {
+
+	.section {
+
+		&--roworsection-name {
+			@extend %section;
+			margin-top: 0;
+
+			@include respond-to(medium) {
+				margin-top: .75rem;
+			}
+
+			.column {
+				@include make-sm-column(12); //bootstrap column size mixin
+			}
+		}
+
+		&--roworsection-name-2 {
+			@extend %section;
+			.column {
+				@include make-sm-column(6); //bootstrap column size mixin
+			}
+		}
+	}
+}

@@ -1,42 +1,22 @@
+/*******
+
+	Cordial Framework
+	Scaffolding Configuration
+
+*******/
+
 // Base scale for rem
 $scale: 16px;
 
 // @media breakpoints
 // You may not need to use these. Great for use in creating breakpoints for Neat Grids
+// Also great for using the respond-to() function
 // Use with breakpoint() function
 $breakpoints: (
-  extra-small: 576px,
-  small: 768px,
-  medium: 992px,
-  large: 1200px
-);
-
-// z-index
-// z() function
-$z-layers: (
-  bottomless-pit: -9999,
-  base: 1,
-  dropdown: 3000,
-  overlay: 4000,
-  modal: 4001
-);
-
-//margin() function
-$margin: (
-	base: 1rem,
-	none: 0,
-	extra-small: .5rem,
-	small: .75rem,
-	large: 1.5rem,
-	extra-large: 2rem,
-);
-
-// padding() function
-$padding: (
-	base: .5rem,
-	none: 0,
-	extra-small: .25rem,
-	small: .3rem,
-	large: .7rem,
-	extra-large: 1rem,
+	tiny: 0px,
+	extra-small: 576px,
+	small: 768px,
+	medium: 992px,
+	large: 1200px,
+	extra-large: 1350px
 );

@@ -1,123 +1,71 @@
 // Media Object
-.media,
-.media__body {
+.media {
+	margin: 0;
+	transition: transition(base);
 	overflow: hidden;
 	_overflow: visible;
 	zoom: 1;
-}
-
-.media {
-	margin: margin(large);
-	margin-left: margin(none);
-
-	.media__utility-links a {
-		@extend %link--utility;
-	}
 
 	.media__interest {
 		float: left;
 		margin-right: margin(base);
+
+		.media__interest-image {
+			display: block;
+		}
 	}
 
-	.media__interest img {
-		display: block;
+	.media__body {
+		overflow: hidden;
+		_overflow: visible;
+		zoom: 1;
+
+		.media__body-inner {
+			.media__label {
+				@extend %label;
+			}
+
+			.media__label-featured {
+				display: none;
+			}
+
+			.media__title {
+			}
+
+			.media__text {
+
+			}
+
+			.media__date {
+				display: inline-block;
+			}
+
+			.media__utility-link-list {
+				display: inline-block;
+				padding: padding(none);
+				margin: margin(none);
+				list-style: none;
+
+				.media__utility-link-item {
+					display: inline-block;
+
+					.media__utility-links {
+						@extend %link;
+					}
+				}
+			}
+		}
 	}
 
-	.media__interest--left {
+	// image on the left
+	&--interest-left {
 		float: right;
+		margin-right: margin(base);
 		margin-left: margin(base);
 	}
 
-	.media__title {
-
-	}
-
-	.media__text {
-
-	}
-
-	.media__tags {
-
-	}
-
-	.media__date {
-		float: right;
-	}
-
-	.media__read-more-button {
-		float: right;
-	}
-
-	.media__utility-links {
-		display: none;
-	}
-
-	.media__nest {
-		padding-top: padding(small);
-		clear: both;
-	}
-
-	.media--nested {
+	&--nested {
 		margin-bottom: margin(extra-small);
 		margin-top: margin(extra-small);
-	}
-}
-
-
-.media.media--common {
-
-}
-
-.media.media--slim {
-	.media__text,
-	.media__tags,
-	.media__read-more-button {
-		display: none;
-	}
-	.media__date {
-		float: none;
-	}
-}
-
-
-.media.media--no-interest {
-	.media__interest {
-		display: none;
-	}
-}
-
-
-
-.media.media--big-interest {
-	.media__interest {
-
-	}
-
-	.media__interest img {
-
-	}
-
-	.media__title {
-
-	}
-
-	.media__text {
-
-	}
-
-	.media__tags {
-
-	}
-
-	.media__date {
-
-	}
-
-	.media__read-more-button {
-
-	}
-
-	.media__utility-links {
-
 	}
 }

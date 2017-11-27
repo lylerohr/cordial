@@ -1,9 +1,7 @@
-a,
-.link {
+a {
 	@extend %link;
 
-	.link__utility {
-		@extend %link--utility;
+	&:visited {
+		color: inherit;
 	}
-
 }

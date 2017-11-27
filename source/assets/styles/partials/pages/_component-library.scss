@@ -1,0 +1,239 @@
+.cd_stage {
+	@extend .container-fluid;
+	@include clearfix;
+
+	.cd_template--component-library {
+		@include make-row;
+	}
+
+	.cd_main-content {
+		@include make-sm-column(9);
+		@include make-sm-column-push(3);
+		@include make-lg-column(10);
+		@include make-lg-column-push(2);
+		padding-left: 0;
+		padding-right: 0;
+
+		@include respond-to(small) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+
+		.cd_header {
+			height: 150px;
+			background-color: color(brand-primary);
+			position: relative;
+
+			&__title {
+				@extend %heading--cd-massive;
+				@include hv-center;
+				width: 90%;
+				text-align: center;
+				color: color(white);
+			}
+		}
+
+		.cd_section--abstract {
+			@extend %section;
+
+			.cd_summary {
+				@include make-sm-column(12);
+			}
+		}
+
+
+		.cd_component-group {
+			@extend %section;
+			margin: margin(large) 0;
+
+			&__title {
+				@extend %heading--cd-large;
+				@include make-sm-column(12);
+				padding-top: padding(base);
+				padding-bottom: padding(base);
+				background-color: color(gray-extra-light, 10, lighten);
+			}
+
+			.cd_component {
+				margin: margin(extra-large) 0;
+
+				&__title {
+					@extend %heading--cd-small;
+					@include make-sm-column(12);
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+
+				&__instance {
+					@include make-sm-column(12);
+				}
+
+				&__markup-display {
+					@include make-sm-column(12);
+				}
+
+				&__style-display {
+					@include make-sm-column(12);
+				}
+			}
+		}
+
+	}
+
+	.cd_component-menu {
+		@include make-sm-column(3);
+		@include make-sm-column-pull(9);
+		@include make-lg-column(2);
+		@include make-lg-column-pull(10);
+
+		&__masthead {
+			margin: margin(base) 0;
+		}
+
+		&__client-logo {
+			margin-bottom: margin(base);
+		}
+
+		&__client-name {
+			@extend %heading--cd-base;
+			margin-bottom: 0;
+			font-weight: bold;
+		}
+
+		&__library-name {
+			@extend %heading--cd-tiny;
+			letter-spacing: normal;
+		}
+
+		&__library-description {
+			@extend %text--cd-extra-small;
+		}
+
+		&__navigation {
+			margin-top: margin(large);
+		}
+
+		&__column-header {
+			@extend %heading--cd-base;
+			margin-bottom: margin(extra-small);
+		}
+
+		&__nav-list {
+			margin: margin(none);
+			padding: padding(none);
+			list-style: none;
+
+			&-item {
+				margin-bottom: margin(extra-small);
+				width: 100%;
+			}
+
+			&-link {
+				@extend %button--cd-nav-button;
+				@extend %button--icon-float-right;
+
+				&::after {
+					content: "\f107";
+					font-weight: 100;
+				}
+
+				&.active {
+					color: color(brand-primary, 10, darken);
+					border-bottom: border(hairline, brand-primary);
+					border-top: border(hairline, brand-primary);
+
+					&::after {
+						content: "\f106";
+						font-weight: 100;
+					}
+				}
+			}
+		}
+	}
+}
+
+//components
+
+.cd_color-list {
+	@include make-row();
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		@include make-xs-column(6);
+		@include make-sm-column(4);
+		@include make-md-column(3);
+		@include make-lg-column(2);
+		margin-left: 0;
+
+		.cd_color {
+			text-align: center;
+
+			&__block {
+				width: 100%;
+				height: 100px;
+
+				&--brand-primary {
+					background-color: color(brand-primary);
+				}
+
+				&--brand-secondary {
+					background-color: color(brand-secondary);
+				}
+			}
+
+			&__title {
+				@extend %heading--cd-small;
+				margin: margin(extra-small) 0;
+				font-weight: 600;
+				letter-spacing: normal;
+				text-align: center;
+			}
+
+			&__hex-value {
+				text-align: center;
+				margin-bottom: margin(none);
+			}
+
+			&__rgba-value {
+				text-align: center;
+				margin-bottom: margin(none);
+			}
+		}
+	}
+}
+
+.cd_font-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		@include make-sm-column(6);
+		margin-left: 0;
+
+		.cd_font {
+
+			&__big-a {
+				@extend %heading--cd-massive;
+			}
+
+			&__alphabet-lower {
+				@extend %text--cd-text;
+				margin-bottom: margin(none);
+			}
+
+			&__alphabet-upper {
+				@extend %text--cd-text;
+				margin-bottom: margin(none);
+				text-transform: uppercase;
+			}
+
+			&__title {
+				@extend %heading--cd-small;
+			}
+		}
+	}
+}
