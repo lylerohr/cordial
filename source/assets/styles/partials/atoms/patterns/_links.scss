@@ -16,49 +16,34 @@ $link-patterns: (
 	size: base,  /* can use for preset theming within constructor */
 	name: 'link', /* used to create placeholder class name */
 	font-family: font-family(text),
-	color: color(cta),
+	color: color(brand-primary),
 	cursor: pointer,
 	text-decoration: none,
-	hover: (
-		color: color(cta, 30%, darken),
+	":hover": (
+		color: color(brand-primary, 10, lighten),
+		text-decoration: none,
 	),
-	active: (
-		color: color(cta, dark),
+	":active": (
+		color: color(brand-primary, 10, lighten),
+	),
+	elements: (),
+	modifiers: (
+		"--icon-left": (
+			":before": (
+				font-family: font-family(icons),
+				margin-right: margin(extra-small),
+				content: "",
+			),
+		),
+		"--icon-right": (
+			":after": (
+				font-family: font-family(icons),
+				margin-left: margin(extra-small),
+				content: "",
+			),
+		),
 	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
 @include construct($link-patterns);
-
-
-// Text variations
-// @extend %<name>
-$utility-link: (
-	name: link--utility,
-	size: small,
-);@include construct($link-patterns, $utility-link);
-
-$view-link: (
-	name: link--view-more,
-	size: extra-small,
-	text-transform: uppercase,
-	font-weight: 400,
-);@include construct($link-patterns, $view-link);
-
-$link--icon-left: (
-	name: 'link--icon-left',
-	before: (
-		font-family: font-family(icons),
-		margin-right: margin(extra-small),
-		content: "",
-	),
-);@include construct($link-patterns, $link--icon-left);
-
-$link--icon-right: (
-	name: 'link--icon-right',
-	after: (
-		font-family: font-family(icons),
-		margin-left: margin(extra-small),
-		content: "",
-	),
-);@include construct($link-patterns, $link--icon-right);

@@ -17,7 +17,11 @@ $image-patterns: (
 	name: 'image',
 	font-family: font-family(text),
 	font-size: font-size(base),
-	color: color(gray, extra-dark),
+	color: color(text, extra-dark),
+	width: 100%,
+	height: auto,
+	elements: (),
+	modifiers: (),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors

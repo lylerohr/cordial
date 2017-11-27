@@ -16,34 +16,57 @@ $text-patterns: (
 	white-space: normal,
 	size: base,  /* can use for preset theming within constructor */
 	name: 'text', /* used to create placeholder class name */
-
-
 	font-family: font-family(text),
-	color: color(gray, dark),
+	color: color(text),
+	elements: (),
+	modifiers: (
+		"--cd-text": (
+			responsive-type: true,
+			type-style: text,
+			size: base,
+		),
+		"--cd-extra-small": (
+			responsive-type: true,
+			type-style: text,
+			size: extra-small,
+		),
+		"--cd-tiny": (
+			responsive-type: true,
+			type-style: text,
+			size: tiny,
+		),
+		"--cd-large": (
+			responsive-type: true,
+			type-style: text,
+			size: large,
+		),
+		"--paragraph": (
+			responsive-type: true,
+			type-style: text,
+			size: base,
+		),
+		"--small": (
+			responsive-type: true,
+			type-style: text,
+			size: extra-small,
+		),
+		"--comment": (
+			responsive-type: true,
+			type-style: text,
+			size: small,
+		),
+		"--caption": (
+			responsive-type: true,
+			type-style: text,
+			size: extra-small,
+		),
+		"--code": (
+			name: 'text--code',
+			font-family: font-family(code),
+			white-space: pre,
+		),
+	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
 @include construct($text-patterns);
-
-
-$text--small: (
-	name: 'text--small',
-	size: small,
-);@include construct($text-patterns, $text--small);
-
-$text--blockquote: (
-	name: 'text--blockquote',
-	size: big,
-	margin: margin(none),
-	padding: 1rem,
-	font-weight: 100,
-	background-color: color(gray, 50%, lighten),
-	border-radius: radius(large)
-);
-@include construct($text-patterns, $text--blockquote);
-
-$code: (
-	name: 'text--code',
-	font-family: font-family(code),
-	white-space: pre,
-);@include construct($text-patterns, $code);

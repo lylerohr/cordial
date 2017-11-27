@@ -1,0 +1,6 @@
+%section {
+	@include make-row();
+	margin: margin(extra-large) 0;
+
+	@include clearfix;
+}

@@ -66,6 +66,12 @@
 	}
 }
 
+// TODO
+@function gradient($start-color, $end-color, $rotation) {
+	@return "";
+}
+
+
 // theme/type
 @function font-family($font) {
 	 @if map-has-key($font-stack, $font) {

@@ -1,4 +1,4 @@
-@import "constructors";
+@import "constructor";
 
 // @media breakpoints
 @mixin respond-to($breakpoint) {
@@ -26,56 +26,6 @@
   }
 }
 
-// Add responsive type
-@mixin responsive-type($modifier-map) {
-	@if map-get($modifier-map, responsive-type) == true {
-		@include type-sizes-responsive(map-get($modifier-map, size));
-	}
-}
-
-// Responsive type
-@mixin type-sizes-responsive($size) {
-	font-size: rem(map-get-deep($type-sizes, $size, extra-small, font-size));
-	line-height: rem(map-get-deep($type-sizes, $size, extra-small, line-height) * map-get-deep($type-sizes, $size, extra-small, font-size));
-
-
-	@media screen and (min-width: breakpoint(small)) {
-		font-size: rem(map-get-deep($type-sizes, $size, small, font-size));
-		line-height: rem(map-get-deep($type-sizes, $size, small, line-height) * map-get-deep($type-sizes, $size, small, font-size));
-	}
-
-	@media screen and (min-width: breakpoint(medium)) {
-		font-size: rem(map-get-deep($type-sizes, $size, medium, font-size));
-		line-height: rem(map-get-deep($type-sizes,$size, medium, line-height) * map-get-deep($type-sizes, $size, medium, font-size));
-	}
-
-	@media screen and (min-width: breakpoint(large)) {
-		font-size: rem(map-get-deep($type-sizes, $size, large, font-size));
-		line-height: rem(map-get-deep($type-sizes, $size, large, line-height) * map-get-deep($type-sizes, $size, large, font-size));
-	}
-}
-
-@mixin heading-sizes-responsive($size) {
-	font-size: rem(map-get-deep($heading-sizes, $size, extra-small, font-size));
-	line-height: rem(map-get-deep($heading-sizes, $size, extra-small, line-height) * map-get-deep($heading-sizes, $size, extra-small, font-size));
-
-
-	@media screen and (min-width: breakpoint(small)) {
-		font-size: rem(map-get-deep($heading-sizes, $size, small, font-size));
-		line-height: rem(map-get-deep($heading-sizes, $size, small, line-height) * map-get-deep($heading-sizes, $size, small, font-size));
-	}
-
-	@media screen and (min-width: breakpoint(medium)) {
-		font-size: rem(map-get-deep($heading-sizes, $size, medium, font-size));
-		line-height: rem(map-get-deep($heading-sizes, $size, medium, line-height) * map-get-deep($heading-sizes, $size, medium, font-size));
-	}
-
-	@media screen and (min-width: breakpoint(large)) {
-		font-size: rem(map-get-deep($heading-sizes, $size, large, font-size));
-		line-height: rem(map-get-deep($heading-sizes, $size, large, line-height) * map-get-deep($heading-sizes, $size, large, font-size));
-	}
-}
-
 // Add pseudo class or element
 @mixin pseudo-constructor($modifier) {
 	@each $modifier-name, $modifier-value in $modifier {
@@ -88,4 +38,55 @@
 			}
 		}
 	}
+}
+
+// Gradients
+@mixin gradient-bg-linear($start-color, $end-color, $rotation: null) {
+	background: $start-color;
+	background: -webkit-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: -o-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: -moz-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: linear-gradient(#{$rotation}deg, $start-color, $end-color);
+}
+
+@mixin line-clamp($lines, $height...) {
+	display:-webkit-box;
+	position: relative;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: $height;
+}
+
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin hv-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin full-bleed-row {
+	margin-left: -30px;
+	margin-right: -30px;
 }
