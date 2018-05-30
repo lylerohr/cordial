@@ -7,19 +7,14 @@
 
 // constructor
 @mixin construct($map-master) {
-	// create placeholder class merging $default map styles and $modifier map styles
 	$default-master: map-remove($map-master, pattern-config, elements, modifiers);
-	//@debug #{$default-master};
-
 	@include build-default-style($map-master, $default-master);
-	@include build-elements($map-master, $default-master);
 	@include build-modifiers($map-master, $default-master);
 }
 
-
 @mixin build-default-style($map-master, $default-master) {
 	%#{map-get-deep($map-master, pattern-config, name)} {
-		@include pseudo-constructor($map-master); /* creates all pseudo classes & elements if passed in $modifier */
+		@include pseudo-constructor($map-master); // creates all pseudo classes & elements if passed in $modifier
 		@include constructor-type($map-master);
 		@each $name, $value in $default-master {
 			#{$name}: #{$value};
@@ -27,37 +22,20 @@
 	}
 }
 
-
-
-@mixin build-elements($map-master, $default-master) {
-	@if map-has-keys($map-master, elements) {
-		$elements: map-get($map-master, elements);
-	}
-}
-
 @mixin build-modifiers($map-master, $default-master) {
 	@if map-has-keys($map-master, modifiers) {
 		$modifiers: map-get($map-master, modifiers); // generate map of modifiers
-		//@debug #{$modifiers};
-
 		@each $mk, $mv in $modifiers { // get each modifier map
-			$modifier: map-get($modifiers, $mk); // get all modifiers 
-			$modifier: extend($default-master, $modifier);
-
-			%#{map-get-deep($map-master, pattern-config, name)}#{$mk} {
-				@include pseudo-constructor($modifier); // creates all pseudo classes & elements if passed in $modifier
+			$modifier: map-get($modifiers, $mk); // get all modifiers
+			$modifier: extend($default-master, $modifier); // adds default styles to modifier map
+			%#{map-get-deep($map-master, pattern-config, name)}#{$mk} { // creates BEM modifier placeholder style
+				@include pseudo-constructor($modifier); // creates all pseudo classes & elements if passed
 				@include constructor-type($modifier); // create responsive type styles
-			//@debug "Modifier before map-remove: #{$modifier}";
 				$modifier: map-remove($modifier, pattern-config); // remove patern config before creating adding parameters to class
-			//@debug "Modifier after map-remove: #{$modifier}";
-				@each $key, $value in $modifier {
+				@each $key, $value in $modifier { // cycle through modifier map
 					#{$key}: #{$value};
 				}
-
 			}
-
-
 		}
-
 	}
 }

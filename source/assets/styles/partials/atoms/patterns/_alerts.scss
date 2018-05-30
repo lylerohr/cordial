@@ -2,9 +2,18 @@
 
 // @extend %alert
 $alert-patterns: (
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'alert',
+		type-style: text,
+	),
 	display: block,
-	margin: margin(base) margin(none) margin(large),
+	margin: margin(base),
 	padding: 0,
+	white-space: normal,
+	font-family: font-family(text),
+	color: color(gray, extra-dark),
 	text-align: left,
 	vertical-align: inherit,
 	touch-action: auto,
@@ -12,13 +21,18 @@ $alert-patterns: (
 	background-image: none,
 	background-color: transparent,
 	border: none,
-	white-space: normal,
-	size: base,
-	name: 'alert',
-	font-family: font-family(text),
-	font-size: font-size(base),
-	color: color(gray, extra-dark),
+	":hover": (),
+	":active": (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
-
-// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($alert-patterns);
+@include construct($alert-patterns);

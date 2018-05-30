@@ -2,38 +2,39 @@
 
 // @extend %input
 $input-patterns: (
-	name:'input',
-	responsive-type: false,
-	type-style: text,
-	size: base,
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'input',
+		type-style: text,
+	),
 	display: block,
-	width: 100%,
-	height: 34px,
-	padding: 6px 12px,
-	line-height: 1.42857143,
-	color: #555,
-	background-color: #fff,
+	white-space: normal,
+	margin: 0,
+	padding: 0,
+	text-align: center,
+	font-family: font-family(text),
+	color: color(white),
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
 	background-image: none,
-	border: border(hairline, clear),
-	border-radius: 0px,
-	-webkit-box-shadow: none,
-	box-shadow: none,
-	-webkit-transition: transition(slow),
-	-o-transition: transition(slow),
-	transition: transition(slow),
-	box-sizing: border-box,
-	":hover": (
-		transition: transition(slow),
+	background-color: color(clear),
+	border: none,
+	":hover": (),
+	":active": (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
 	),
-	":active": (
-	),
-	":focus": (
-		outline-color: none,
-		outline: none,
-	),
-	elements: (),
-	modifiers: (),
 );
 
 // Initialize the %input placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($input-patterns);
+@include construct($input-patterns);
