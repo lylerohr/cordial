@@ -998,28 +998,360 @@ html, body, #fullheight {
 	Atoms
 
 ************************************/
-/*
-@import "patterns/alerts";
-@import "patterns/badges";
-@import "patterns/blockquote";
-@import "patterns/buttons";
-@import "patterns/headings";
-@import "patterns/icons";
-@import "patterns/images";
-@import "patterns/inputs";
-@import "patterns/labels";
-@import "patterns/links";
-@import "patterns/rule";
-*/
-.text, p, .test-default {
-  /* creates all pseudo classes & elements if passed in $modifier */
+button,
+.button {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  :hover: (background-color: #c1aa80, text-decoration: none, color: white, border: 0.1333rem solid transparent);
+  :active: (background-color: #b99f6f, color: white, outline: none); }
+  button:hover,
+  .button:hover {
+    background-color: #c1aa80;
+    text-decoration: none;
+    color: white;
+    border: 0.1333rem solid transparent; }
+  button:active,
+  .button:active {
+    background-color: #b99f6f;
+    color: white;
+    outline: none; }
+  @media screen and (min-width: 0px) {
+    button,
+    .button {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    button,
+    .button {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    button,
+    .button {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    button,
+    .button {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    button,
+    .button {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    button,
+    .button {
+      font-size: 1.1rem; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  @media screen and (min-width: 0px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-size: 1.1rem; } }
+
+.icon {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  @media screen and (min-width: 0px) {
+    .icon {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    .icon {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    .icon {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    .icon {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    .icon {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    .icon {
+      font-size: 1.1rem; } }
+
+img {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  @media screen and (min-width: 0px) {
+    img {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    img {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    img {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    img {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    img {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    img {
+      font-size: 1.1rem; } }
+
+input {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  @media screen and (min-width: 0px) {
+    input {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    input {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    input {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    input {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    input {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    input {
+      font-size: 1.1rem; } }
+
+a {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  :hover: (background-color: rgba(255, 255, 255, 0), text-decoration: none, color: white, border: 0.1333rem solid transparent);
+  :active: (background-color: rgba(255, 255, 255, 0), color: white, outline: none); }
+  a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    color: white;
+    border: 0.1333rem solid transparent; }
+  a:active {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    outline: none; }
+  @media screen and (min-width: 0px) {
+    a {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    a {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    a {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    a {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    a {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    a {
+      font-size: 1.1rem; } }
+
+hr {
+  line-height: 1.4;
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  @media screen and (min-width: 0px) {
+    hr {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 576px) {
+    hr {
+      font-size: 0.8rem; } }
+  @media screen and (min-width: 768px) {
+    hr {
+      font-size: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    hr {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    hr {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    hr {
+      font-size: 1.1rem; } }
+
+.text, p {
   line-height: 1.4;
   display: block;
   margin: 0;
   padding: 0;
   white-space: normal;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: inherit;
+  font-weight: normal;
   color: black;
   text-align: left;
   vertical-align: inherit;
@@ -1029,99 +1361,58 @@ html, body, #fullheight {
   background-color: rgba(255, 255, 255, 0);
   border: none #848484; }
   @media screen and (min-width: 0px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 0.8rem; } }
   @media screen and (min-width: 576px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 0.8rem; } }
   @media screen and (min-width: 768px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 0.9rem; } }
   @media screen and (min-width: 992px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 1rem; } }
   @media screen and (min-width: 1200px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 1rem; } }
   @media screen and (min-width: 1350px) {
-    .text, p, .test-default {
+    .text, p {
       font-size: 1.1rem; } }
 
-.test-modifier {
-  line-height: 1.4;
-  display: block;
-  margin: 0;
-  padding: 0;
-  white-space: normal;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: inherit;
-  color: #b59b6b;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  background-color: purple;
-  border: none #848484;
-  letter-spacing: 3px; }
-  @media screen and (min-width: 0px) {
-    .test-modifier {
-      font-size: 1.33328rem; } }
-  @media screen and (min-width: 576px) {
-    .test-modifier {
-      font-size: 1.33328rem; } }
-  @media screen and (min-width: 768px) {
-    .test-modifier {
-      font-size: 1.49994rem; } }
-  @media screen and (min-width: 992px) {
-    .test-modifier {
-      font-size: 1.6666rem; } }
-  @media screen and (min-width: 1200px) {
-    .test-modifier {
-      font-size: 1.6666rem; } }
-  @media screen and (min-width: 1350px) {
-    .test-modifier {
-      font-size: 1.83326rem; } }
-
-.test-modifier2 {
-  display: block;
-  margin: 0;
-  padding: 0;
-  white-space: normal;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: inherit;
-  color: #b59b6b;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  background-color: brown;
-  border: none #848484;
-  letter-spacing: 3px;
-  font-size: 4rem; }
-
-/*
-@import "badges";
-@import "blockquote";
-@import "buttons";
-@import "headings";
-@import "icons";
-@import "images";
-@import "inputs";
-@import "links";
-@import "rule";
-*/
-.text {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
+  font-size: inherit;
+  color: inherit;
   font-weight: normal; }
-  p {
-    margin-bottom: 1rem; }
+
+/****************************
+
+Icon Styles
+
+Utilizes the icons pattern to generate icon-based pseudo elements
+
+.[pf]_icon--[name]--[position] {
+	@extend %icon--fpo--before; <---- pattern generated
+}
+
+****************************/
+.icon {
+  text-align: center; }
+
+fieldset {
+  margin: 1rem;
+  padding: 0;
+  border: none; }
 
 /************************************
 

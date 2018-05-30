@@ -2,25 +2,39 @@
 
 // @extend %heading
 $heading-patterns: (
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'heading',
+		type-style: text,
+	),
 	display: block,
+	white-space: normal,
 	margin: 0,
 	padding: 0,
+	text-align: center,
+	font-family: font-family(text),
+	color: color(white),
 	vertical-align: inherit,
 	touch-action: auto,
 	cursor: inherit,
 	background-image: none,
-	background-color: transparent,
-	border: border(none),
-	white-space: normal,
-	name: 'heading', /* used to create placeholder class name */
-	font-family: font-family(display),
-	color: color(brand-secondary),
-	size: base,
-	responsive-type: true,
-	type-style: display,
-	elements: (),
-	modifiers: (),
+	background-color: color(clear),
+	border: none,
+	":hover": (),
+	":active": (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($heading-patterns);
+@include construct($heading-patterns);
