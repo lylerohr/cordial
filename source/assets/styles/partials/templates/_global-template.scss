@@ -1,0 +1,25 @@
+%#{$class-prefix}template {
+	@extend .container-fluid;
+
+	&__outer {
+		@extend .row;
+	}
+
+	&__inner {
+		@extend .container;
+	}
+
+	&__heading {
+		@extend .row;
+	}
+
+	&__content {
+		@extend .row;
+	}
+
+	&--full-bleed {
+		&__inner {
+			@extend .container-fluid;
+		}
+	}
+}

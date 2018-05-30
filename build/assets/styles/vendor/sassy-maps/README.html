@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="sassymapsgemversionhttps:badge.fury.iorbsassy-maps.pnghttp:badge.fury.iorbsassy-mapsbuildstatushttps:travis-ci.orgteam-sasssassy-maps.pngbranch0.x.xhttps:travis-ci.orgteam-sasssassy-maps">Sassy Maps <a href="http://badge.fury.io/rb/sassy-maps"><img src="https://badge.fury.io/rb/sassy-maps.png" alt="Gem Version" /></a> <a href="https://travis-ci.org/Team-Sass/Sassy-Maps"><img src="https://travis-ci.org/Team-Sass/Sassy-Maps.png?branch=0.x.x" alt="Build Status" /></a></h1>
+
+<p>Sassy Maps adds a variety of functions aimed at helping you work with Sass 3.3 maps much easier.</p>
+
+<h2 id="tableofcontents">Table of Contents</h2>
+
+<ol>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#using-sassy-maps">Using Sassy Maps</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#optional-modules">Optional Modules</a>
+
+<ul>
+<li><a href="#memo">Memo</a></li>
+</ul></li>
+</ol>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Sassy Maps is a Sass extension, so you&#8217;re going to need Sass installed. If you do not already have Sass installed, please read <a href="http://sass-lang.com/install">Install Sass</a>. Sassy Maps 0.3.x requires <em>Sass 3.3.0</em> or higher.</p>
+
+<p><strong>It is HIGHLY RECOMMENDED that you run all Sass (or Compass if using it) commands through <a href="http://bundler.io/">Bundler</a></strong></p>
+
+<p>If the compiler you are using is not compatible with the above minimum versions, it will not compile correctly.</p>
+
+<p><strong>BE AWARE that CodeKit and most other GUI compilers <em>do not support Bundler</em> and are therefore NOT RECOMMENDED</strong></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>The preferred way to install and use Sassy Maps is through Bundler. To do so, add the following to your Gemfile (Sass provided to ensure the correct versions are used):</p>
+
+<pre><code class="ruby">gem &quot;sass&quot;, &quot;~&gt;3.3.0&quot;
+gem &quot;sassy-maps&quot;, &quot;~&gt;0.3.2&quot;
+</code></pre>
+
+<p>Once you have done so, run <code>bundle install</code> to install your dependencies, and remember to run all of your compilation through <code>bundle exec</code>.</p>
+
+<p>You can also install Sassy Maps through <a href="http://bower.io/">Bower</a> as it has no Ruby requirements. To do so, run the following command:</p>
+
+<pre><code class="bash">bower install sassy-maps --save-dev
+</code></pre>
+
+<p><em>BE AWARE</em> that while you can install Sassy Maps through Bower, Sassy Maps still only works with Sass compilers that have full compatibility with Sass 3.3.x and greater. If using Compass, you are also going to need to add the folder using Compass&#8217;s <a href="http://compass-style.org/help/tutorials/configuration-reference/"><code>add_import_path</code></a> config option instead of the standard <code>require</code>.</p>
+
+<h2 id="usingsassymaps">Using Sassy Maps</h2>
+
+<p>If you already have a project made and you&#8217;d like to use Sassy Maps with it, add the following to your <code>config.rb</code> file:</p>
+
+<p><code>require 'sassy-maps'</code></p>
+
+<p>Then, add the following to your Sass file towards the top:</p>
+
+<p><code>@import &quot;sassy-maps&quot;;</code></p>
+
+<h2 id="functions">Functions</h2>
+
+<ul>
+<li><code>map-get-deep($map, $keys...)</code> - Returns the value of the final item in <code>$keys</code> from the map <code>$map</code>. Will return <code>null</code> if no value is present and will warn of errors in search (such as if an intermediate depth is <code>null</code> or not a <code>map</code>).</li>
+<li><code>map-set($map, $key, $value)</code> - Returns a map that has the <code>$key</code> in <code>$map</code> set to the to given <code>$value</code>.</li>
+<li><code>map-set-deep($map, $keys, $value)</code> - Returns a map that has the <code>$key</code> in <code>$map</code> set to the given <code>$value</code>. <code>$key</code> should be single-depth list of keys, for instance <code>map-set-deep($map, ('foo' 'bar' 'baz'), &quot;Hello World&quot;)</code>.</li>
+<li><code>map-to-string($map)</code> - Returns a string representation of the given <code>$map</code>.</li>
+</ul>
+
+<h2 id="optionalmodules">Optional Modules</h2>
+
+<p>Sassy Maps comes with optional modules that extend upon the base functionality of Sassy Maps to provide additional map-based functionality. The following are optional modules available with Sassy Maps:</p>
+
+<ul>
+<li><a href="#memo">Memo</a></li>
+</ul>
+
+<h3 id="memo">Memo</h3>
+
+<p>Memo is a <a href="http://en.wikipedia.org/wiki/Memoization">Memoization</a> framework for Sass. Designed with framework developers in mind, it makes it easy to store and retrieve the output of functions quickly and easily without needing to run the function again. For complex functions this should greatly speed up overall compilation time for repeat function calls with identical input.</p>
+
+<p>To use Memo, simply include <code>@import &quot;memo&quot;;</code> and you&#8217;re good to go (normal <a href="#installation">Sassy Maps installation</a> still applies). Memo comes with two functions:</p>
+
+<ul>
+<li><code>memo-set($module, $key, $value)</code> - Sets a memoization <code>$key</code> to the given <code>$value</code> for the prescribed <code>$module</code> (framework). The function will return <code>true</code>. Also available as a mixin (<code>@include memo-set($module, $key, $value)</code>).</li>
+<li><code>memo-get($module, $key)</code> - Returns the value of the memoization <code>$key</code> for the prescribed <code>$module</code>.</li>
+</ul>
+
+<p>Using Memo is fairly simple, just check to see if there is a memoization value for your key (and it&#8217;s not <code>null</code>); if there is, return that, if not, run through the function, set the memoization, and return that result. The following example stores whether Memo is available in a variable and uses the function name as the memoization module, but if building a framework such as <a href="http://github.com/team-sass/breakpoint">Breakpoint</a>, that framework should be the name of the memoization module.</p>
+
+<pre><code class="scss">$Memo-Exists: function-exists(memo-get) and function-exists(memo-set);
+
+@function percentage($target, $context) {
+  @if $Memo-Exists {
+    $result: memo-get(percentage, $target $context);
+
+    @if $result != null {
+      @return $result;
+    }
+  }
+
+  $result: $target / $context * 100%;
+
+  @if $Memo-Exists {
+    $holder: memo-set(percentage, $target $context, $result);
+  }
+
+  @return $result;
+}
+
+$half: percentage(20px, 40px); // No memoization exists, will run through the function
+$half-again: percentage(20px, 40px); // Memoization exists, will just return that result
+</code></pre>
+
+</body>
+</html>
+

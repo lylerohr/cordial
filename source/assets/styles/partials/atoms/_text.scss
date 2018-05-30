@@ -1,4 +1,3 @@
-p,
 .text {
 	margin: 0;
 	padding: 0;
@@ -8,9 +7,28 @@ p,
 	-webkit-margin-end: 0;
 	font-weight: normal;
 	@extend %text;
-	margin-bottom: margin(base);
+
+	@at-root p {
+		margin-bottom: margin(base);
+	}
+}
+
+p {
+	@extend %text;
 }
 
 pre {
-	@extend %text--code;
+	//@extend %text--code;
+}
+
+.test-default {
+	@extend %text;
+}
+
+.test-modifier {
+	@extend %text--test;
+}
+
+.test-modifier2 {
+	@extend %text--test2;
 }
