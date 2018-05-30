@@ -2,26 +2,39 @@
 
 // @extend %label
 $label-patterns: (
-	display: inline-block,
-	padding: .3333rem .4444rem .222rem .4444rem,
-	text-align: left,
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'label',
+		type-style: text,
+	),
+	display: block,
+	white-space: normal,
+	margin: 0,
+	padding: 0,
+	text-align: center,
+	font-family: font-family(text),
+	color: color(white),
 	vertical-align: inherit,
 	touch-action: auto,
 	cursor: inherit,
 	background-image: none,
-	background-color: color(text),
+	background-color: color(clear),
 	border: none,
-	white-space: normal,
-	font-family: font-family(text),
-	text-transform: uppercase,
-	color: color(white),
-	responsive-type: true,
-	type-style: text,
-	size: tiny,
-	name: 'label', /* used to create placeholder class name */
-	elements: (),
-	modifiers: (),
+	":hover": (),
+	":active": (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($label-patterns);
+@include construct($label-patterns);

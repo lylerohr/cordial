@@ -29,11 +29,8 @@
 ******************************/
 
 @mixin constructor-type($style-map) {
-	@debug #{map-get-deep($style-map, pattern-config, responsive-type)};
 	@if map-get-deep($style-map, pattern-config, responsive-type) == true {
 		@include responsive-type(map-get-deep($style-map, pattern-config, size), map-get-deep($style-map, pattern-config, type-style));
-	} @else {
-		@warn "Cannot get parameters for: #{$style-map}";
 	}
 }
 

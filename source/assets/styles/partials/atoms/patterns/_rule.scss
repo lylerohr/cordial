@@ -1,31 +1,40 @@
 // RULE PATTERNS
 
 // @extend %rule
-$button-patterns: (
-	name:'rule',
-	responsive-type: true,
+$rule-patterns: (
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'rule',
+		type-style: text,
+	),
 	display: block,
+	white-space: normal,
 	margin: 0,
 	padding: 0,
-	white-space: nowrap,
-	vertical-align: middle,
-	font-family: font-family(text),
-	font-weight: inherit,
 	text-align: center,
-	text-decoration: none,
-	color: color(brand-primary),
+	font-family: font-family(text),
+	color: color(white),
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
 	background-image: none,
 	background-color: color(clear),
-	border: border(base, transparent),
-	border-radius: radius(base),
-	touch-action: manipulation,
-	cursor: pointer,
-	transition: transition(slow),
+	border: none,
 	":hover": (),
 	":active": (),
-	elements: (),
-	modifiers: (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %constructor placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($button-patterns);
+@include construct($rule-patterns);

@@ -1,28 +1,40 @@
 // TEXT PATTERNS
 
 // @extend %blockquote
-$text-patterns: (
+$blockquote-patterns: (
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'blockquote',
+		type-style: text,
+	),
 	display: block,
-	margin:  0 0 3.8889rem 0,
-	padding: .777rem 0 0 1.6111rem,
-	font-weight: inherit,
-	text-align: left,
+	white-space: normal,
+	margin: 0,
+	padding: 0,
+	text-align: center,
+	font-family: font-family(text),
+	color: color(white),
 	vertical-align: inherit,
 	touch-action: auto,
 	cursor: inherit,
 	background-image: none,
-	background-color: transparent,
-	border: border(none),
-	border-left: border(thick, brand-primary),
-	white-space: normal,
-	size: base,  /* can use for preset theming within constructor */
-	font-size: 2.2222rem,
-	name: 'blockquote', /* used to create placeholder class name */
-	font-family: font-family(text),
-	color: color(brand-primary),
-	elements: (),
-	modifiers: (),
+	background-color: color(clear),
+	border: none,
+	":hover": (),
+	":active": (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($text-patterns);
+@include construct($blockquote-patterns);

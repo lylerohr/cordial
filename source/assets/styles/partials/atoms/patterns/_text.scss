@@ -13,7 +13,7 @@ $text-patterns: (
 	padding: 0,
 	white-space: normal,
 	font-family: font-family(text),
-	font-weight: inherit,
+	font-weight: normal,
 	color: color(text),
 	text-align: left,
 	vertical-align: inherit,
@@ -22,7 +22,6 @@ $text-patterns: (
 	background-image: none,
 	background-color: color(clear),
 	border: border(none),
-	elements: (),
 	modifiers: (
 		"--test": (
 			pattern-config: (
@@ -30,18 +29,6 @@ $text-patterns: (
 				size: large,
 				type-style: text,
 			),
-			color: color(brand-primary),
-			letter-spacing: 3px,
-			background-color: purple,
-		),
-		"--test2": (
-			pattern-config: (
-				responsive-type: false,
-			),
-			color: color(brand-primary),
-			letter-spacing: 3px,
-			background-color: brown,
-			font-size: 4rem,
 		),
 	),
 );

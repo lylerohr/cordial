@@ -2,25 +2,25 @@
 
 // @extend %button
 $button-patterns: (
-	name:'button',
-	responsive-type: true,
-	display: inline-block,
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'button',
+		type-style: text,
+	),
+	display: block,
+	white-space: normal,
 	margin: 0,
-	padding: padding(base),
-	white-space: nowrap,
-	vertical-align: middle,
-	font-family: font-family(text),
-	font-weight: inherit,
+	padding: 0,
 	text-align: center,
-	text-decoration: none,
-	color: color(brand-primary),
+	font-family: font-family(text),
+	color: color(white),
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
 	background-image: none,
 	background-color: color(clear),
-	border: border(base, transparent),
-	border-radius: radius(none),
-	touch-action: manipulation,
-	cursor: pointer,
-	transition: transition(base),
+	border: none,
 	":hover": (
 		background-color: color(brand-secondary),
 		text-decoration: none,
@@ -32,9 +32,18 @@ $button-patterns: (
 		color: color(white),
 		outline: none
 	),
-	elements: (),
-	modifiers: (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %constructor placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($button-patterns);
+@include construct($button-patterns);

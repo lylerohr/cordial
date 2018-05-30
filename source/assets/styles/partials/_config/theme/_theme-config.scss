@@ -17,9 +17,7 @@ $class-prefix: "co_";
 $scale: 18px;
 
 // @media breakpoints
-// You may not need to use these. Great for use in creating breakpoints for Neat Grids
-// Also great for using the respond-to() function
-// Use with breakpoint() function
+// Used in respond-to(<breakpoint>) and breakpoint(<breakpoint>)
 $breakpoints: (
 	base: 0px,
 	mobile: 576px,
@@ -35,20 +33,16 @@ $breakpoints: (
 
 ************************************/
 
-
-
-// sets font stacks
 // font-family($font);
 $font-stack: (
 	text: #{Helvetica, Arial, sans-serif},
 	display: #{'Times New Roman', sans-serif},
 	code: #{'courier', monospace},
-	icons: #{ 'woodmode-icons', 'fontawesome'},
+	icons: #{'fontawesome'},
 	cd--text: #{'proxima nova', helvetica, arial, sans-serif},
 	cd--display: #{impact, sans-serif},
 	cd--code: #{courier, monospace},
 );
-
 
 // sets relative base font sizes
 // unitless, DO NOT SET UNITS HERE
@@ -65,7 +59,17 @@ $font-sizes: (
 	extra-tiny: .6,
 );
 
-// line-height, unitless
+// MUST MATCH KEYS IN $breakpoints
+$responsive-type-multipliers: (
+	base: .8,
+	mobile: .8,
+	tablet: .9,
+	desktop: 1,
+	desktop-large: 1,
+	desktop-extra-large: 1.1
+);
+
+// line-height multiplier, unitless
 // mapped to breakpoints
 // lh($size);
 $lh: (
@@ -79,15 +83,6 @@ $lh: (
 	extra-large: 1.5
 );
 
-// MUST MATCH NAME/VALUE IN _scaffolding-config.scss > $breakpoints
-$responsive-type-multipliers: (
-	base: .8,
-	mobile: .8,
-	tablet: .9,
-	desktop: 1,
-	desktop-large: 1,
-	desktop-extra-large: 1.1
-);
 
 /************************************
 

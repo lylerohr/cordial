@@ -2,33 +2,48 @@
 
 // @extend %link
 $link-patterns: (
-	display: inline,
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'link',
+		type-style: text,
+	),
+	display: block,
+	white-space: normal,
 	margin: 0,
 	padding: 0,
-	text-align: left,
+	text-align: center,
+	font-family: font-family(text),
+	color: color(white),
 	vertical-align: inherit,
 	touch-action: auto,
+	cursor: inherit,
 	background-image: none,
-	background-color: transparent,
-	border: border(none),
-	transition: transition(slow),
-	white-space: normal,
-	size: base,  /* can use for preset theming within constructor */
-	name: 'link', /* used to create placeholder class name */
-	font-family: font-family(text),
-	color: color(brand-primary),
-	cursor: pointer,
-	text-decoration: none,
+	background-color: color(clear),
+	border: none,
 	":hover": (
-		color: color(brand-primary, 10, lighten),
+		background-color: color(clear),
 		text-decoration: none,
+		color: color(white),
+		border: border(base, transparent),
 	),
 	":active": (
-		color: color(brand-primary, 10, lighten),
+		background-color: color(clear),
+		color: color(white),
+		outline: none
 	),
-	elements: (),
-	modifiers: (),
+	"::before": (),
+	"::after": (),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-//@include construct($link-patterns);
+@include construct($link-patterns);
