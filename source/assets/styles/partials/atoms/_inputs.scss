@@ -1,3 +1,9 @@
+fieldset {
+	margin: margin(base);
+	padding: 0;
+	border: none;
+}
+
 input {
 	@extend %input;
 }

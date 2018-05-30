@@ -1,76 +1,37 @@
-@mixin grid-template() {
-	.template__container-outer {
-		@extend .container-fluid;
-	}
-
-	.template__container-inner {
-		@extend .container;
-		width: 100%;
-
-		@include respond-to(large) {
-			max-width: 1350px;
+%#{$class-prefix}grid {
+	&--1-col {
+		.wm_grid-item {
+			@include make-sm-column(12);
 		}
 	}
 
-	.template__row {
-		@include make-row();
-	}
-
-	.template__main-content {
-		background-color: #FAFBFC;
-
-		@include respond-to(small) {
-			height: 100%;
-			padding: 0 30px !important;
-		}
-
-		@include respond-to(medium) {
-			padding: 0 60px !important;
+	&--2-col {
+		.wm_grid-item {
+			@include make-sm-column(6);
 		}
 	}
 
-	.template__sidebar-right {
-		background-color: #E9ECEE;
-
-		@include respond-to(small) {
-			height: 100%;
-			padding: 0 30px !important;
+	&--3-col {
+		.wm_grid-item {
+			@include make-sm-column(4);
 		}
 	}
 
-	.template__sidebar-left {
-		background-color: #E9ECEE;
-
-		@include respond-to(small) {
-			height: 100%;
-			padding-top: 0;
-			padding-right: 60px;
-			padding-bottom: 0;
-			padding-left: 60px !important;
+	&--4-col {
+		.wm_grid-item {
+			@include make-sm-column(3);
 		}
 	}
 
-	.footer__left {
-		background-color: color(gray4);
-
-		@include respond-to(small) {
-			padding: 0 30px !important;
-		}
-
-		@include respond-to(medium) {
-			padding: 0 60px !important;
+	&--6-col {
+		.wm_grid-item {
+			@include make-sm-column(2);
 		}
 	}
 
-	.footer__right {
-		background-color: color(brand-secondary);
-
-		@include respond-to(small) {
-			padding: 0 30px !important;
-		}
-
-		@include respond-to(medium) {
-			padding: 0 60px 0 45px !important;
+	&--12-col {
+		.wm_grid-item {
+			@include make-sm-column(1);
 		}
 	}
 }

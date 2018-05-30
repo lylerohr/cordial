@@ -11,7 +11,7 @@ $link-patterns: (
 	background-image: none,
 	background-color: transparent,
 	border: border(none),
-	transition: transition(base),
+	transition: transition(slow),
 	white-space: normal,
 	size: base,  /* can use for preset theming within constructor */
 	name: 'link', /* used to create placeholder class name */
@@ -27,23 +27,8 @@ $link-patterns: (
 		color: color(brand-primary, 10, lighten),
 	),
 	elements: (),
-	modifiers: (
-		"--icon-left": (
-			":before": (
-				font-family: font-family(icons),
-				margin-right: margin(extra-small),
-				content: "",
-			),
-		),
-		"--icon-right": (
-			":after": (
-				font-family: font-family(icons),
-				margin-left: margin(extra-small),
-				content: "",
-			),
-		),
-	),
+	modifiers: (),
 );
 
 // Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-@include construct($link-patterns);
+//@include construct($link-patterns);

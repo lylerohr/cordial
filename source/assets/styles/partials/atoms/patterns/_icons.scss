@@ -1,0 +1,25 @@
+// ICON PATTERNS
+
+// @extend %icon
+$icons: (
+	display: block,
+	margin: 0,
+	padding: 0,
+	vertical-align: inherit,
+	touch-action: auto,
+	cursor: inherit,
+	background-image: none,
+	background-color: transparent,
+	border: border(none),
+	white-space: normal,
+	name: 'icon', /* used to create placeholder class name */
+	font-family: font-family(icons),
+	size: base,
+	responsive-type: true,
+	type-style: text,
+	elements: (),
+	modifiers: (),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+//@include construct($icons);

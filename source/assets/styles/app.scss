@@ -17,33 +17,30 @@
 
 ************************************/
 
-
 // Font Imports
-@import "../../bower_components/font-awesome/css/font-awesome.min.css";
+//@import "../../bower_components/font-awesome/css/font-awesome.min.css";
+@import "partials/_config/theme/fonts";
 
 // Vendor libraries
-@import "../../bower_components/normalize-css/normalize.css";
-@import "../../bower_components/sassy-maps/sass/sassy-maps";
+@import "vendor/normalize-css/normalize.css";
+@import "vendor/sassy-maps/sass/sassy-maps";
 
 // Grid
 // Bootstrap Sass Grid
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/variables"; // Bootstrap Sass Grid
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/mixins"; // Bootstrap Sass Grid
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/print"; // Bootstrap - Print
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/scaffolding"; // Bootstrap - Core
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/grid"; // Bootstrap - Core
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/utilities"; // Bootstrap - Utility classes
-@import "../../bower_components/bootstrap-sass-grid/sass/bootstrap/responsive-utilities"; // Bootstrap - Utility classes
-
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/variables"; // Bootstrap Sass Grid
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/mixins"; // Bootstrap Sass Grid
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/print"; // Bootstrap - Print
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/scaffolding"; // Bootstrap - Core
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/grid"; // Bootstrap - Core
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/utilities"; // Bootstrap - Utility classes
+@import "vendor/bootstrap-sass-grid/sass/bootstrap/responsive-utilities"; // Bootstrap - Utility classes
 
 // Bourbon Neat
 //@import "../../bower_components/neat/core/neat";
 
 // Cordial Sass Library
-@import "partials/libraries/libraries"; // must be first cordial @import
-
-@import "partials/config/theme/theme";
-@import "partials/config/structure/scaffolding";
+@import "partials/_libraries/libraries"; // must be first cordial @import
+@import "partials/_config/theme/theme";
 
 @import "partials/atoms/atoms";
 @import "partials/molecules/molecules";

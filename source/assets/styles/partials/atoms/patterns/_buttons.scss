@@ -6,7 +6,7 @@ $button-patterns: (
 	responsive-type: true,
 	display: inline-block,
 	margin: 0,
-	padding: .8889rem 1.3889rem,
+	padding: padding(base),
 	white-space: nowrap,
 	vertical-align: middle,
 	font-family: font-family(text),
@@ -17,7 +17,7 @@ $button-patterns: (
 	background-image: none,
 	background-color: color(clear),
 	border: border(base, transparent),
-	border-radius: radius(base),
+	border-radius: radius(none),
 	touch-action: manipulation,
 	cursor: pointer,
 	transition: transition(base),
@@ -26,7 +26,6 @@ $button-patterns: (
 		text-decoration: none,
 		color: color(white),
 		border: border(base, transparent),
-
 	),
 	":active": (
 		background-color: color(brand-secondary, dark),
@@ -34,77 +33,8 @@ $button-patterns: (
 		outline: none
 	),
 	elements: (),
-	modifiers: (
-		"--cd-nav-button": (
-			responsive-type: true,
-			type-style: text,
-			size: base,
-			display: block,
-			width: 100%,
-			padding: padding(extra-small) padding(none),
-			text-align: left,
-			border-radius: radius(small),
-			border: border(hairline, clear),
-			":hover": (
-				color: color(brand-primary, 10, darken),
-			),
-			":active": (
-				border-bottom: border(hairline, brand-primary),
-				border-top: border(hairline, brand-primary),
-				color: color(brand-primary, 10, darken),
-			),
-		),
-		"--large": (
-			responsive-type: true,
-			type-style: text,
-			size: base,
-			padding: .8889rem 1.3889rem,
-		),
-		"--small": (
-			responsive-type: true,
-			type-style: text,
-			size: small,
-			padding: padding(base) padding(small),
-			":hover": (
-				background-color: green,
-			),
-			":active": (
-				background-color: red,
-			),
-		),
-		"--icon-left": (
-			responsive-type: true,
-			type-style: text,
-			size: base,
-			":before": (
-				font-family: font-family(icons),
-				margin-right: margin(extra-small),
-				content: "",
-			),
-		),
-		"--icon-right": (
-			responsive-type: true,
-			type-style: text,
-			size: base,
-			":after": (
-				font-family: font-family(icons),
-				margin-left: margin(extra-small),
-				content: "",
-			),
-		),
-		"--icon-float-right": (
-			responsive-type: true,
-			type-style: text,
-			size: base,
-			":after": (
-				font-family: font-family(icons),
-				margin-left: margin(extra-small),
-				content: "",
-				float: right,
-			),
-		),
-	),
+	modifiers: (),
 );
 
 // Initialize the %constructor placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-@include construct($button-patterns);
+//@include construct($button-patterns);

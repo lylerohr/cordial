@@ -20,18 +20,12 @@ $button-patterns: (
 	border-radius: radius(base),
 	touch-action: manipulation,
 	cursor: pointer,
-	transition: transition(base),
+	transition: transition(slow),
 	":hover": (),
 	":active": (),
 	elements: (),
-	modifiers: (
-		"--hr": (
-			responsive-type: false,
-			border-top: border(hairline, gray-light),
-			margin: margin(base) 0,
-		),
-	),
+	modifiers: (),
 );
 
 // Initialize the %constructor placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-@include construct($button-patterns);
+//@include construct($button-patterns);

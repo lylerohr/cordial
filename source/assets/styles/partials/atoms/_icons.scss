@@ -1,0 +1,23 @@
+
+/****************************
+
+Icon Styles
+
+Utilizes the icons pattern to generate icon-based pseudo elements
+
+.[pf]_icon--[name]--[position] {
+	@extend %icon--fpo--before; <---- pattern generated
+}
+
+****************************/
+
+.icon {
+	@extend %icon;
+	text-align: center;
+
+	&.icon {
+		&--icon-name {
+			
+		}
+	}
+}
