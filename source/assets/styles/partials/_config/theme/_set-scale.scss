@@ -1,0 +1,18 @@
+/*******
+
+	Cordial Framework
+	Scaffolding Configuration
+
+*******/
+
+html {
+	font-size: $scale !important;
+	font-family: font-family(text) !important;
+	font-weight: normal;
+}
+
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}

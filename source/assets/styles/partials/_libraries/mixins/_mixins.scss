@@ -1,0 +1,161 @@
+@import "constructor";
+
+/******************************
+
+	RESPONSIVE TYPE ALGORITM
+
+******************************/
+
+// responsive-type(base, text);
+@mixin responsive-type($fontsize, $displaytype, $lineheight: 'base', $sizeoverride: null) {
+
+	@each $name, $value in $breakpoints {
+		@media screen and (min-width: breakpoint($name)) {
+			font-size: rem(font-size($fontsize) * map-get($responsive-type-multipliers, $name));
+		}
+	}
+
+	@if ($displaytype == 'display') or ($displaytype == 'heading') {
+		line-height: lh(display);
+	} @else if ($displaytype == 'text') {
+		line-height: lh($lineheight);
+	}
+}
+
+/******************************
+
+	CONSTRUCTOR SUPPORT MIXINS
+
+******************************/
+
+@mixin constructor-type($style-map) {
+	@debug #{map-get-deep($style-map, pattern-config, responsive-type)};
+	@if map-get-deep($style-map, pattern-config, responsive-type) == true {
+		@include responsive-type(map-get-deep($style-map, pattern-config, size), map-get-deep($style-map, pattern-config, type-style));
+	} @else {
+		@warn "Cannot get parameters for: #{$style-map}";
+	}
+}
+
+// Add pseudo class or element
+@mixin pseudo-constructor($modifier) {
+	@each $modifier-name, $modifier-value in $modifier {
+		@if str-index($modifier-name, ":") {
+			$pseudo-name: str-slice($modifier-name, 2);
+			&:#{$pseudo-name} {
+				@each $name, $value in map-get-deep($modifier, $modifier-name) {
+					@if str-index($name, ":") {
+						$pseudo-namex: str-slice($name, 2);
+						&:#{$pseudo-namex} {
+							@each $x, $y in map-get-deep($modifier, $modifier-name, $name) {
+								#{$x}: #{$y};
+							}
+						}
+					} @else {
+						#{$name}: #{$value};
+					}
+				}
+			}
+		}
+	}
+}
+
+/******************************
+
+	LAYOUT TOOLS
+
+******************************/
+
+// @media breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`";
+  }
+}
+
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin hv-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin full-bleed-row {
+	margin-left: -30px;
+	margin-right: -30px;
+}
+
+
+/******************************
+
+	THEME TOOLS
+
+******************************/
+
+// Gradients
+@mixin gradient-bg-linear($start-color, $end-color, $rotation: null) {
+	background: $start-color;
+	background: -webkit-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: -o-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: -moz-linear-gradient(#{$rotation}deg, $start-color, $end-color);
+	background: linear-gradient(#{$rotation}deg, $start-color, $end-color);
+}
+
+@mixin line-clamp($lines, $height...) {
+	display:-webkit-box;
+	position: relative;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: $height;
+}
+
+@mixin link--icon ($direction, $icon-name) {
+	@if ($direction == 'left') {
+		@extend %link--icon-left;
+		@extend %icon--#{$icon-name}--before;
+	} @elseif ($direction == 'right') {
+		@extend %link--icon-right;
+		@extend %icon--#{$icon-name}--after;
+	} @else {
+		@warn "Icon link cannot be generated.";
+	}
+}
+
+@mixin button--icon ($direction, $icon-name) {
+	@if ($direction == 'left') {
+		@extend %button--icon-left;
+		@extend %icon--#{$icon-name}--before;
+	} @elseif ($direction == 'right') {
+		@extend %button--icon-right;
+		@extend %icon--#{$icon-name}--after;
+	} @else {
+		@warn "Icon button cannot be generated.";
+	}
+}

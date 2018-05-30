@@ -4,67 +4,138 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../bower_components/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="../assets/styles/app.css">
 	</head>
 	<body>
 
 		<div class="cd_stage"> <!-- container-fluid -->
 			<div class="cd_template--component-library">  <!-- row -->
-				<div class="cd_main-content">  <!-- conlumn 9 -->
-				<div class="cd_header">
-					<h1 class="cd_header__title">Pattern Examples</h1>
+				<div class="cd_template__main-content">  <!-- conlumn 9 -->
+				<div class="cd_section--header">
+					<h1 class="cd_page-title">Pattern Examples</h1>
 				</div>
-
 				<div class="cd_section--abstract">  <!-- row -->
 					<p class="cd_summary">  <!-- column 12 -->
 						A little blurb about this being a really cool live style guide designed using the Atomic Design Methodology, BEM Sass, and the Cordial Framework.
 					</p>
 				</div>
-
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Colors</h3>
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Colors</h3>
 					<div class="cd_component">
 						<h3 class="cd_component__title">Brand Colors</h3>
 						<ul class="cd_color-list">
 							<li class="cd_color-list__item">
 								<div class="cd_color">
-									<div class="cd_color__block cd_color__block--brand-primary"></div>
+									<div class="cd_color__block cd_color__block--bronze-burnt"></div>
 									<h3 class="cd_color__title">
-										Brand Primary
+										Burnt Bronze
 									</h3>
 									<p class="cd_color__hex-value">
-										Hex #2F83B3
+										#B49A6B
 									</p>
 									<p class="cd_color__rgba-value">
-										RGBa 0, 0, 0, 1
+										rgba(181, 155, 107, 1)
 									</p>
 								</div>
 							</li>
 							<li class="cd_color-list__item">
 								<div class="cd_color">
-									<div class="cd_color__block cd_color__block--brand-secondary"></div>
+									<div class="cd_color__block cd_color__block--bronze-worn"></div>
 									<h3 class="cd_color__title">
-										Brand Secondary
+										Worn Burnt Bronze
 									</h3>
 									<p class="cd_color__hex-value">
-										Hex #1E2E3C
+										#C1AA80
 									</p>
 									<p class="cd_color__rgba-value">
-										RGBa 0, 0, 0, 1
+										rgba(193, 170, 128, 1)
+									</p>
+								</div>
+							</li>
+							<li class="cd_color-list__item">
+								<div class="cd_color">
+									<div class="cd_color__block cd_color__block--red-dusty"></div>
+									<h3 class="cd_color__title">
+										Dusty Red
+									</h3>
+									<p class="cd_color__hex-value">
+										#92564D
+									</p>
+									<p class="cd_color__rgba-value">
+										rgba(147, 87, 78, 1)
+									</p>
+								</div>
+							</li>
+							<li class="cd_color-list__item">
+								<div class="cd_color">
+									<div class="cd_color__block cd_color__block--red-october"></div>
+									<h3 class="cd_color__title">
+										Red October
+									</h3>
+									<p class="cd_color__hex-value">
+										#B4564D
+									</p>
+									<p class="cd_color__rgba-value">
+										rgba(181, 86, 78, 1)
+									</p>
+								</div>
+							</li>
+							<li class="cd_color-list__item">
+								<div class="cd_color">
+									<div class="cd_color__block cd_color__block--gray-steel"></div>
+									<h3 class="cd_color__title">
+										Steel Gray
+									</h3>
+									<p class="cd_color__hex-value">
+										#848484
+									</p>
+									<p class="cd_color__rgba-value">
+										rgba(132, 132, 132, 1)
+									</p>
+								</div>
+							</li>
+							<li class="cd_color-list__item">
+								<div class="cd_color">
+									<div class="cd_color__block cd_color__block--gray-worn"></div>
+									<h3 class="cd_color__title">
+										Worn Steel Gray
+									</h3>
+									<p class="cd_color__hex-value">
+										#A7A7A7
+									</p>
+									<p class="cd_color__rgba-value">
+										rgba(167, 167, 167, 1)
+									</p>
+								</div>
+							</li>
+							<li class="cd_color-list__item">
+								<div class="cd_color">
+									<div class="cd_color__block cd_color__block--black"></div>
+									<h3 class="cd_color__title">
+										Carbon Black
+									</h3>
+									<p class="cd_color__hex-value">
+										#000000
+									</p>
+									<p class="cd_color__rgba-value">
+										rgba(0, 0, 0, 1)
 									</p>
 								</div>
 							</li>
 						</ul>
 					</div>
 				</div>
-
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Typefaces & Fonts</h3>
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Typefaces & Fonts</h3>
 					<div class="cd_component">
-						<h3 class="cd_component__title">Font Name</h3>
+						<h3 class="cd_component__title">Typefaces</h3>
 						<ul class="cd_font-list">
 							<li class="cd_font-list__item">
-								<div class="cd_font">
+								<div class="cd_font cd_font--eksell-display">
+									<h4 class="cd_font__title">
+										Exsell Display
+									</h4>
 									<h1 class="cd_font__big-a">
 										Aa
 									</h1>
@@ -74,13 +145,13 @@
 									<p class="cd_font__alphabet-upper">
 										a b c d e f g h i j k l m n o p q r s t u v w x y z
 									</p>
-									<h4 class="cd_font__title">
-										Font Name, Size
-									</h4>
 								</div>
 							</li>
 							<li class="cd_font-list__item">
-								<div class="cd_font">
+								<div class="cd_font cd_font--conduit">
+									<h4 class="cd_font__title">
+										Conduit
+									</h4>
 									<h1 class="cd_font__big-a">
 										Aa
 									</h1>
@@ -90,107 +161,944 @@
 									<p class="cd_font__alphabet-upper">
 										a b c d e f g h i j k l m n o p q r s t u v w x y z
 									</p>
+								</div>
+							</li>
+							<li class="cd_font-list__item">
+								<div class="cd_font cd_font--apercu-light">
 									<h4 class="cd_font__title">
-										Font Name, Size
+										Apercu Light
 									</h4>
+									<h1 class="cd_font__big-a">
+										Aa
+									</h1>
+									<p class="cd_font__alphabet-lower">
+										a b c d e f g h i j k l m n o p q r s t u v w x y z
+									</p>
+									<p class="cd_font__alphabet-upper">
+										a b c d e f g h i j k l m n o p q r s t u v w x y z
+									</p>
 								</div>
 							</li>
 						</ul>
 					</div>
 				</div>
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Typography</h3>
+					<div class="cd_component__column">
+						<div class="cd_component">
+							<h3 class="cd_component__title">Headings</h3>
+							<div class="cd_headings">
+								<h1 class="wm_h1 cd_heading">Heading 1</h1>
+								<h2 class="wm_h2 cd_heading">Heading 2</h2>
+								<h3 class="wm_h3 cd_heading">Heading 3</h3>
+								<h4 class="wm_h4 cd_heading">Heading 4</h4>
+								<h5 class="wm_h5 cd_heading">Heading 5</h5>
+								<h6 class="wm_h6 cd_heading">Heading 6</h6>
+								<h6 class="wm_h7 cd_heading">Subheading 1</h6>
+								<h6 class="wm_h8 cd_heading">Subheading 2</h6>
+								<h6 class="wm_h9 cd_heading">Subheading 3</h6>
+							<!--
+								<h1 class="wm_h1 cd_heading">Heading 1 [100px, 6.6667rem]</h1>
+								<h2 class="wm_h2 cd_heading">Heading 2 [70px, 4.6667rem]</h2>
+								<h3 class="wm_h3 cd_heading">Heading 3 [55px, 3.6667rem]</h3>
+								<h4 class="wm_h4 cd_heading">Heading 4 [35px, 2.3333rem]</h4>
+								<h5 class="wm_h5 cd_heading">Heading 5 [30px, 2rem]</h5>
+								<h6 class="wm_h6 cd_heading">Heading 6 [23px, 1.5333rem]</h6>
+								<h6 class="wm_h7 cd_heading">Subheading 1 [25px, 1.6667rem]</h6>
+								<h6 class="wm_h8 cd_heading">Subheading 2 [15px, 1rem]</h6>
+								<h6 class="wm_h9 cd_heading">Subheading 3 [13px, 6.8667rem]</h6>
+							-->
+							</div>
+							<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+								<pre><code class="language-markup"><script><h1 class="wm_h1 cd_heading">Heading 1</h1>
+<h2 class="wm_h2 cd_heading">Heading 2</h2>
+<h3 class="wm_h3 cd_heading">Heading 3</h3>
+<h4 class="wm_h4 cd_heading">Heading 4</h4>
+<h5 class="wm_h5 cd_heading">Heading 5</h5>
+<h6 class="wm_h6 cd_heading">Heading 6</h6>
+<h6 class="wm_h7 cd_heading">Subheading 1</h6>
+<h6 class="wm_h8 cd_heading">Subheading 2</h6>
+<h6 class="wm_h9 cd_heading">Subheading 3</h6></script></code></pre>
+							</div>
+							<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+								<pre><code class="language-css">h1,
+.wm_h1 {
+	@extend %heading--h1;
+}
 
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Typography</h3>
-					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="COMPONENT-NAME cd_component__instance">
-							Fake component.
+h2,
+.wm_h2 {
+	@extend %heading--h2;
+}
+
+h3,
+.wm_h3 {
+	@extend %heading--h3;
+}
+
+h4,
+.wm_h4 {
+	@extend %heading--h4;
+}
+
+h5,
+.wm_h5 {
+	@extend %heading--h5;
+}
+
+h6,
+.wm_h6 {
+	@extend %heading--h6;
+}
+
+.wm_h7 {
+	@extend %heading--h7;
+}
+
+.wm_h8 {
+	@extend %heading--h8;
+}
+
+.wm_h9 {
+	@extend %heading--h9;
+}</code></pre>
+							</div>
 						</div>
-						<div class="cd_component__markup-display">
-							<pre><code class="language-markup"><script> --- </script></code></pre>
+
+						<div class="cd_component">
+							<h3 class="cd_component__title">Heading Groups</h3>
+							<div class="cd_headings cd_heading-groups">
+
+								<div class="wm_heading-group wm_heading-group--tiny">
+									<h6 class="wm_heading-group__heading">Tiny Heading Group</h6>
+									<span class="wm_heading-group__border"></span>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--small wm_heading-group--black-white">
+									<h3 class="wm_heading-group__heading">Small Heading Group</h3>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--small wm_heading-group--black-gold">
+									<h3 class="wm_heading-group__heading">Small Heading Group</h3>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--large wm_heading-group--white-gold">
+									<h2 class="wm_heading-group__heading">Large Heading Group</h2>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--large wm_heading-group--white-white">
+									<h2 class="wm_heading-group__heading">Large Heading Group</h2>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--large wm_heading-group--gold-white">
+									<h2 class="wm_heading-group__heading">Large Heading Group</h2>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--full">
+									<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+									<h1 class="wm_heading-group__heading">Masthead Heading Group</h1>
+									<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--subhead-only">
+									<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+									<h1 class="wm_heading-group__heading">Masthead Heading Group</h1>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--copy-only">
+									<h1 class="wm_heading-group__heading">Masthead Heading Group</h1>
+									<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+								</div>
+
+								<div class="wm_heading-group wm_heading-group--heritage">
+									<h2 class="wm_heading-group__year">1940</h2>
+									<div class="wm_heading-group__vertical-line"></div>
+									<h3 class="wm_heading-group__heading">Heritage Heading Group</h3>
+									<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+								</div>
+							</div>
+							<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+								<pre><code class="language-markup"><script> --- </script></code></pre>
+							</div>
+							<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+								<pre><code class="language-css">[Sass]</code></pre>
+							</div>
 						</div>
-						<div class="cd_component__style-display">
-							<pre><code class="language-css">[Sass]</code></pre>
+
+						<div class="cd_component">
+							<h3 class="cd_component__title">Text</h3>
+							<div class="cd_headings">
+								<p>Paragraph Tag Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip.</p>
+								<span class="wm_text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip.</span>
+							</div>
+							<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+								<pre><code class="language-markup"><script><p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip.</p>
+<span class="wm_text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip.</span></script></code></pre>
+							</div>
+							<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+								<pre><code class="language-css">.wm_text {
+	margin: 0;
+	padding: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	font-weight: normal;
+	@extend %text;
+
+	@at-root p {
+		margin-bottom: margin(base) !important;
+	}
+}</code></pre>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Iconography</h3>
+				<div class="cd_section--component-group"> <!-- Icons -->
+					<h3 class="cd_component-group-title">Iconography</h3>
 					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="COMPONENT-NAME cd_component__instance">
-							Fake component.
+						<h3 class="cd_component__title">Navigational Icons</h3>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--menu"></span>
+							<p class="cd_icon__title">Hamburger Nav</p>
 						</div>
-						<div class="cd_component__markup-display">
-							<pre><code class="language-markup"><script> --- </script></code></pre>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--reply"></span>
+							<p class="cd_icon__title">Reply</p>
 						</div>
-						<div class="cd_component__style-display">
-							<pre><code class="language-css">[Sass]</code></pre>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--caret-down"></span>
+							<p class="cd_icon__title">Down Caret</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--caret-left"></span>
+							<p class="cd_icon__title">Left Caret</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--caret-right"></span>
+							<p class="cd_icon__title">Right Caret</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--caret-up"></span>
+							<p class="cd_icon__title">Up Caret</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--close"></span>
+							<p class="cd_icon__title">Close</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--plus"></span>
+							<p class="cd_icon__title">Plus</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--minus"></span>
+							<p class="cd_icon__title">Minus</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--search"></span>
+							<p class="cd_icon__title">Search</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--search-plus"></span>
+							<p class="cd_icon__title">Search Plus</p>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Referential Icons</h3>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--home"></span>
+							<p class="cd_icon__title">Home</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--brochure"></span>
+							<p class="cd_icon__title">Brochure</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--cabinet"></span>
+							<p class="cd_icon__title">Cabinet</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--calendar"></span>
+							<p class="cd_icon__title">Calendar</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--cabinet"></span>
+							<p class="cd_icon__title">Compass</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--location"></span>
+							<p class="cd_icon__title">Location</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--news"></span>
+							<p class="cd_icon__title">News</p>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Social Icons</h3>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--facebook"></span>
+							<p class="cd_icon__title">Facebook</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--houzz"></span>
+							<p class="cd_icon__title">Houzz</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--instagram"></span>
+							<p class="cd_icon__title">Instagram</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--pinterest"></span>
+							<p class="cd_icon__title">Pinterest</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--twitter"></span>
+							<p class="cd_icon__title">Twitter</p>
+						</div>
+						<div class="cd_icon">
+							<span class="cd_icon__icon cd_icon--youtube"></span>
+							<p class="cd_icon__title">YouTube</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Motion / Transition</h3>
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Links &amp; Buttons</h3>
 					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="COMPONENT-NAME cd_component__instance">
-							Fake component.
-						</div>
-						<div class="cd_component__markup-display">
-							<pre><code class="language-markup"><script> --- </script></code></pre>
-						</div>
-						<div class="cd_component__style-display">
-							<pre><code class="language-css">[Sass]</code></pre>
-						</div>
-					</div>
-				</div>
-
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Grid</h3>
-					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="COMPONENT-NAME cd_component__instance">
-							Fake component.
-						</div>
-						<div class="cd_component__markup-display">
-							<pre><code class="language-markup"><script> --- </script></code></pre>
-						</div>
-						<div class="cd_component__style-display">
-							<pre><code class="language-css">[Sass]</code></pre>
-						</div>
-					</div>
-				</div>
-
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Component Group Title</h3>
-					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="COMPONENT-NAME cd_component__instance">
-							Fake component.
-						</div>
-						<div class="cd_component__markup-display">
-							<pre><code class="language-markup"><script> --- </script></code></pre>
-						</div>
-						<div class="cd_component__style-display">
-							<pre><code class="language-css">[Sass]</code></pre>
-						</div>
-					</div>
-				</div>
-
-				<div class="cd_component-group">
-					<h3 class="cd_component-group__title">Component Group Title</h3>
-					<div class="cd_component">
-						<h3 class="cd_component__title">Component Title</h3>
-						<div class="media cd_component__instance">
-							<a class="media__interest" href="#" >
-								<img src="http://placehold.it/65x65" alt="alt text" />
+						<h3 class="cd_component__title">Links</h3>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link" href="#">
+								Basic text link.
 							</a>
-							<div class="media__body">
-								<a class="media__title" href="#">Title Link</a>
-								<p class="media__text">Lorem ipsum dolor sit amet adipiscing.</p>
-								<p class="media__utility-links"><a href="#">utility</a> <a href="#">utility</a></p>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button--button-link" href="#">
+								Link Button
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--icon--left" href="#">
+								Icon Link Left
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--icon--right" href="#">
+								Icon Link right
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--nav-main" href="#">
+								Main Navigation Link
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--nav-filter" href="#">
+								Filter Navigation Link
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--nav-filter-list" href="#">
+								Filter List Link
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--nav-dial" href="#">
+								1940
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_link wm_link--nav-footer" href="#">
+								Footer Navigation Link
+							</a>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script><a class="wm_link" href="#">
+	Basic text link.
+</a>
+
+<a class="wm_link wm_link--icon--left" href="#">
+	Icon Link Left
+</a>
+
+<a class="wm_link wm_link--icon--right" href="#">
+	Icon Link right
+</a>
+
+<a class="wm_link wm_link--nav-main" href="#">
+	Main Navigation Link
+</a>
+
+<a class="wm_link wm_link--nav-filter" href="#">
+	Filter Navigation Link
+</a>
+
+<a class="wm_link wm_link--nav-filter-list" href="#">
+	Filter List Link
+</a>
+
+<a class="wm_link wm_link--nav-dial" href="#">
+	Dial Navigation Link
+</a>
+
+<a class="wm_link wm_link--nav-footer" href="#">
+	Footer Navigation Link
+</a></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]
+a {
+	@extend %link;
+}
+
+.wm_link {
+
+	&--icon--right {
+		@include link--icon(right, icon-name);
+	}
+
+	&--icon--left {
+		@include link--icon(left, icon-name);
+	}
+
+	&--nav-main {
+		@extend %link;
+		@extend %link--nav-main;
+	}
+
+	&--nav-filter {
+		@extend %link;
+		@extend %link--nav-filter;
+	}
+
+	&--nav-filter-list {
+		@extend %link;
+		@extend %link--nav-filter-list;
+	}
+
+	&--nav-dial {
+		@extend %link;
+		@extend %link--nav-dial;
+	}
+
+	&--nav-footer {
+		@extend %link;
+		@extend %link--nav-footer;
+	}
+}
+</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Buttons</h3>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--primary" href="#">
+								Primary Button
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--secondary" href="#">
+								Secondary Button
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--primary--icon-only" href="#">
+
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--secondary--icon-only" href="#">
+
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--tertiary--icon-only" href="#">
+
+							</a>
+						</div>
+						<div class="cd_component__column cd_column--links">
+							<a class="wm_button wm_button--search" href="#">
+
+							</a>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script><a class="wm_button wm_button--primary" href="#">
+	Primary Button
+</a>
+
+<a class="wm_button wm_button--secondary" href="#">
+	Secondary Button
+</a>
+
+<a class="wm_button wm_button--primary--icon-only" href="#"></a>
+
+<a class="wm_button wm_button--secondary--icon-only" href="#"></a>
+
+<a class="wm_button wm_button--tertiary--icon-only" href="#"></a>
+
+<a class="wm_button wm_button--search" href="#"></a>
+</script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]
+button,
+.wm_button {
+	@extend %button;
+}
+
+.wm_button--primary {
+	@extend %button;
+	@extend %button--primary;
+}
+
+.wm_button--secondary {
+	@extend %button;
+	@extend %button--secondary;
+}
+
+.wm_button--primary--icon-only {
+	@extend %button;
+	@extend %button--primary--icon-only;
+}
+
+.wm_button--secondary--icon-only,
+.wm_video-card__play-button {
+	@extend %button;
+	@extend %button--secondary--icon-only;
+}
+
+.wm_button--tertiary--icon-only {
+	@extend %button;
+	@extend %button--tertiary--icon-only;
+}
+
+.wm_button--search {
+	@extend %button;
+	@extend %button--search;
+}</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Share Button</h3>
+						<div class="cd_component__column cd_column--share-button">
+							<span class="wm_expandable-button" href="#">
+								<span class="wm_expandable-button__text">Share</span>
+								<span class="wm_expandable-button__tray">
+									<a class="wm_link"><span class="wm_icon wm_icon--facebook"></span></a>
+									<a class="wm_link"><span class="wm_icon wm_icon--twitter"></span></a>
+									<a class="wm_link"><span class="wm_icon wm_icon--houzz"></spn></a>
+									<a class="wm_link"><span class="wm_icon wm_icon--pinterest"></span></a>
+									<a class="wm_link"><span class="wm_icon wm_icon--instagram"></span></a>
+									<a class="wm_link"><span class="wm_icon wm_icon--youtube"></span></a>
+								</span>
+							</span>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script><span class="wm_expandable-button" href="#">
+	<span class="wm_expandable-button__text">Share</span>
+	<span class="wm_expandable-button__tray">
+		<a class="wm_link"><span class="wm_icon wm_icon--facebook"></span></a>
+		<a class="wm_link"><span class="wm_icon wm_icon--twitter"></span></a>
+		<a class="wm_link"><span class="wm_icon wm_icon--houzz"></spn></a>
+		<a class="wm_link"><span class="wm_icon wm_icon--pinterest"></span></a>
+		<a class="wm_link"><span class="wm_icon wm_icon--instagram"></span></a>
+		<a class="wm_link"><span class="wm_icon wm_icon--youtube"></span></a>
+	</span>
+</span></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]
+.wm_expandable-button {
+	transition: transition(extra-slow);
+	display: inline;
+	cursor: pointer;
+
+	&__text {
+		display: inline-block;
+		border-top: border(hairline, bronze-burnt);
+		border-bottom: border(hairline, bronze-burnt);
+		border-left: border(hairline, bronze-burnt);
+		border-right: none;
+		padding: 0rem 1.3rem 0rem 1.5rem;
+		line-height: 2rem;
+		position: relative;
+		text-transform: uppercase;
+		background-color: color(white);
+
+		&::after {
+			font-family: font-family(icons);
+			content: "\e903";
+			margin-right: 1rem;
+			margin-left: 1.3rem;
+			line-height: 1rem;
+			position: absolute;
+			top: -1px;
+			background-color: color(black);
+			border: border(hairline, black);
+			line-height: 2rem;
+			width: 2rem;
+			color: color(bronze-burnt);
+			text-align: center;
+			border-left: border(hairline, bronze-burnt);
+		}
+
+		&:hover::after {
+			background-color: color(black);
+		}
+	}
+
+	&__tray {
+		transition: transition(slow);
+		display: inline-block;
+		padding-right: .5rem;
+		padding-left: .5rem;
+		margin-left: 1.3rem;
+		background-color: black;
+		height: 32px;
+		border: border(hairline, black);
+		position: absolute;
+		margin-left: .6rem;
+		opacity: 0;
+		z-index: -1;
+
+		span {
+			display: inline-block;
+			font-size: 1rem;
+			padding-right: .5rem;
+			line-height: 2rem;
+			color: color(white);
+
+			&:hover {
+				color: color(bronze-burnt);
+				z-index: 1;
+			}
+		}
+	}
+
+	&:hover > .wm_expandable-button__tray {
+		margin-left: 1.3rem;
+		opacity: 1;
+		z-index: 1;
+	}
+}</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Auxiliary Nav Button</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_aux-nav-menu">
+								<a class="wm_aux-nav-button" href="#">
+									<div class="wm_aux-nav-button__icon">
+										<span class="wm_icon wm_icon--fpo"></span>
+									</div>
+									<div class="wm_aux-nav-button__text">
+										Email Exclusives
+									</div>
+								</a>
+								<a class="wm_aux-nav-button" href="#">
+									<div class="wm_aux-nav-button__icon">
+										<span class="wm_icon wm_icon--fpo"></span>
+									</div>
+									<div class="wm_aux-nav-button__text">
+										Download a Brochure
+									</div>
+								</a>
+								<a class="wm_aux-nav-button" href="#">
+									<div class="wm_aux-nav-button__icon">
+										<span class="wm_icon wm_icon--fpo"></span>
+									</div>
+									<div class="wm_aux-nav-button__text">
+										Find a Showroom
+									</div>
+								</a>
+							</div>
+
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Lists</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Main  List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--nav-primary">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-main" href="#">
+										Link One
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-main" href="#">
+										Link Two
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-main" href="#">
+										Link Three
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Secondary  List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--nav-secondary">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--icon--left" href="#">
+										Link One
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--icon--left" href="#">
+										Link Two
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--icon--left" href="#">
+										Link Three
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Dial  List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--nav-dial">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-dial" href="#">
+										1940
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-dial active" href="#">
+										1950
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-dial" href="#">
+										1960
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Filter  List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--nav-filter">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter active" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter" href="#">
+										Filter
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Filter List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--filter-list">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter-list" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter-list active" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-filter-list" href="#">
+										Filter
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Footer List</h3>
+						<div class="cd_component__column cd_column--links">
+							<ul class="wm_list wm_list--nav-footer">
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-footer" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-footer active" href="#">
+										Filter
+									</a>
+								</li>
+								<li class="wm_list__item">
+									<a class="wm_link wm_link--nav-footer" href="#">
+										Filter
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Forms</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Text Inputs</h3>
+						<div class="cd_component__column cd_column--forms">
+							<div class="wm_input-group">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Open Textfield</label><i class="wm_input-group__bar"></i>
+							</div>
+							<div class="wm_input-group wm_input-group--invalid">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Open Textfield Warning</label><i class="wm_input-group__bar"></i>
+								<p class="wm_input-group__warning-message">Warning message</p>
+							</div>
+							<div class="wm_input-group wm_input-group--closed">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Closed Textfield</label><i class="wm_input-group__bar"></i>
+							</div>
+							<div class="wm_input-group wm_input-group--closed wm_input-group--invalid">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Closed Textfield Warning</label><i class="wm_input-group__bar"></i>
+								<p class="wm_input-group__warning-message">Warning message</p>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Self-Contained Form</h3>
+						<div class="cd_component__column cd_column--forms">
+							<div class="wm_input-group wm_input-group--closed wm_input-group--submit">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Self-Contained Form</label><i class="wm_input-group__bar"></i>
+								<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" href="#"></a>
+							</div>
+							<div class="wm_input-group wm_input-group--closed wm_input-group--submit wm_input-group--reverse">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Self-Contained Form</label><i class="wm_input-group__bar"></i>
+								<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" href="#"></a>
+							</div>
+							<div class="wm_input-group wm_input-group--closed wm_input-group--submit wm_input-group--reverse-full">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Self-Contained Form</label><i class="wm_input-group__bar"></i>
+								<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" href="#"></a>
+							</div>
+							<div class="wm_input-group wm_input-group--closed wm_input-group--invalid wm_input-group--submit">
+								<input class="wm_input-group__text wm_input" type="text" required="required">
+								<label class="wm_input-group__control-label" for="input">Self-Contained Formd Warning</label><i class="wm_input-group__bar"></i>
+								<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" hresf="#"></a>
+								<p class="wm_input-group__warning-message">Warning message</p>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Search Bar</h3>
+						<div class="cd_component__column cd_column--forms">
+							<div class="wm_search-bar">
+								<input class="wm_search-bar__text wm_input" type="text" required="required" placeholder="What are you looking for?"/>
+								<a class="wm_search-bar__submit-button wm_button--search" href="#"></a>
+								<span class="wm_search-bar__bar"></span>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script><div class="wm_search-bar">
+	<input class="wm_search-bar__text wm_input" type="text" required="required" placeholder="What are you looking for?"/>
+	<a class="wm_search-bar__submit-button wm_button--search" href="#"></a>
+	<span class="wm_search-bar__bar"></span>
+</div></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+<!--
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Motion / Transition</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Component Title</h3>
+						<div class="cd_component__column">
+							<div class="COMPONENT-NAME">
+								Fake component.
 							</div>
 						</div>
 						<div class="cd_component__markup-display">
@@ -201,21 +1109,1053 @@
 						</div>
 					</div>
 				</div>
-			</div>
-				<div class="cd_component-menu">
-				<div class="cd_component-menu__masthead">
-					<img class="cd_component-menu__client-logo" src="http://placehold.it/240x150" />
-					<h4 class="cd_component-menu__client-name">
-						Client Name
-					</h4>
-					<h5 class="cd_component-menu__library-name">
-						Design Library
-					</h5>
-					<p class="cd_component-menu__library-description">
-						The compoponent library and live style guide created for CLIENT to utilize in the update and maintenance of <a href="#">client-site.com</a>.
-					</p>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Grid</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Component Title</h3>
+						<div class="cd_component__column">
+							<div class="COMPONENT-NAME">
+							Fake component.
+						</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
 				</div>
-				<div class="cd_component-menu__navigation">
+-->
+				<div class="cd_section--component-group"> <!-- Navigation -->
+					<h3 class="cd_component-group-title">Navigation</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Header Navigation</h3>
+						<div class="cd_component__column">
+							<div class="wm_header">
+								<div class="wm_header__logo">
+									<a href="#">
+										<img class="wm_header__logo-image" src="assets/images/wood-mode--white.svg" />
+									</a>
+								</div>
+								<div class="wm_header__hamburger-nav">
+									<a class="wm_header__hamburger-nav-link">
+										<span class="fa fa-navicon"></span>
+									</a>
+								</div>
+								<div class="wm_header__tools">
+									<ul class="wm_header__tools-list">
+										<li class="wm_header__tools-list-item">
+											<a class="wm_header__tools-list-item-link--showroom" href="#">
+												Find Your Showroom
+											</a>
+										</li>
+										<li class="wm_header__tools-list-item">
+											<a class="wm_header__tools-list-item-link--brochure" href="#">
+												Download a Brochure
+											</a>
+										</li>
+										<li class="wm_header__tools-list-item">
+											<a class="wm_header__tools-list-item-link--email" href="#">
+												Email Exclusives
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="wm_header__navigation">
+									<a class="wm_header__navigation-mobile-close"></a>
+									<ul class="wm_header__navigation-list">
+
+										<li class="wm_header__navigation-list-item">
+											<a class="wm_header__navigation-list-item-link" href="#">
+												Design Inspiration
+											</a>
+										</li>
+										<li class="wm_header__navigation-list-item">
+											<a class="wm_header__navigation-list-item-link" href="#">
+												Gallery By Room
+											</a>
+										</li>
+										<li class="wm_header__navigation-list-item">
+											<a class="wm_header__navigation-list-item-link" href="#">
+												Cabinetry Options
+											</a>
+										</li>
+										<li class="wm_header__navigation-list-item">
+											<a class="wm_header__navigation-list-item-link" href="#">
+												Wood-Mode Experience
+											</a>
+										</li>
+										<li class="wm_header__navigation-list-item">
+											<a class="wm_header__navigation-list-item-link" href="#">
+												Planning Materials
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="wm_header__search">
+									<div class="wm_search-bar">
+										<input class="wm_search-bar__text wm_input" type="text" required="required" placeholder="What are you looking for?"/>
+										<a class="wm_search-bar__submit-button wm_button--search" href="#"></a>
+										<span class="wm_search-bar__bar"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Footer</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Title</h3>
+						<div class="cd_component__column cd_column--links">
+							div class="wm_section--footer">
+								<div id="wm_footer">
+									<div class="wm_footer__social">
+										<span class="wm_footer__social-header">Join the Conversation</span>
+										<ul class="wm_footer__social-icons">
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--facebook"></span></a>
+											</li>
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--twitter"></span></a>
+											</li>
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--houzz"></span></a>
+											</li>
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--pinterest"></span></a>
+											</li>
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--instagram"></span></a>
+											</li>
+											<li class="wm_footer__social-icons-item">
+												<a class="wm_link" href="#"><span class="wm_footer__social-icons-icon wm_icon wm_icon--youtube"></span></a>
+											</li>
+										</ul>
+									</div>
+									<div class="wm_footer__promise">
+										<span class="wm_footer__promise-header">Our Promise</span>
+										<ul class="wm_footer__promise-icons">
+											<li class="wm_footer__promise-icons-item">
+												<a class="wm_link" href="#"><img class="wm_footer__promise-icons-icon" src="../assets/images/wood-mode-warranty.png" /></a>
+											</li>
+											<li class="wm_footer__promise-icons-item">
+												<a class="wm_link" href="#"><img class="wm_footer__promise-icons-icon" src="../assets/images/brookhaven-warranty.png" /></a>
+											</li>
+										</ul>
+									</div>
+									<div class="wm_footer__logo">
+										<img src="../assets/images/wood-mode--black.svg" alt="Wood-Mode Inc. Logo" />
+									</div>
+									<div class="wm_footer__navigation">
+										<ul class="wm_list wm_list--nav-footer">
+											<li class="wm_list__item">
+												<a class="wm_link wm_link--nav-footer" href="#">
+													Home
+												</a>
+											</li>
+											<li class="wm_list__item">
+												<a class="wm_link wm_link--nav-footer active" href="#">
+													Press Room
+												</a>
+											</li>
+											<li class="wm_list__item">
+												<a class="wm_link wm_link--nav-footer" href="#">
+													For the Trade
+												</a>
+											</li>
+											<li class="wm_list__item">
+												<a class="wm_link wm_link--nav-footer" href="#">
+													Career Network
+												</a>
+											</li>
+											<li class="wm_list__item">
+												<a class="wm_link wm_link--nav-footer" href="#">
+													Contact
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="wm_footer__copyright">
+										<span class="wm_footer__copyright-content">&copy; 2018 Wood-Mode Inc. USA</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+
+				<div class="cd_section--component-group">  <!-- Cards -->
+					<h3 class="cd_component-group-title">Cards</h3>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="wm_card">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<a class="wm_card__title" href="#">This is a really really long title thingy that is awesome.</a>
+											<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<a class="wm_card__button">Call to Action</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="wm_card">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<a class="wm_card__title" href="#">Short Title.</a>
+											<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<a class="wm_card__button">Call to Action</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="wm_card wm_card--black-title">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<a class="wm_card__title" href="#">Black Title.</a>
+											<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<a class="wm_card__button">Call to Action</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Large</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="wm_card wm_card--large col-sm-6">
+									<a class="wm_card__image" href="#" >
+										<img src="../assets/images/test.jpg" alt="alt text" />
+									</a>
+									<div class="wm_card__body">
+										<a class="wm_card__title" href="#">This is a really really long title thingy that is awesome.</a>
+										<p class="wm_card__subtitle" href="#">This is a really really long title thingy that is awesome.</p>
+										<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										<a class="wm_card__button">Call to Action</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Gold</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="wm_card wm_card--gold col-sm-4">
+									<div class="wm_card__gold-bg">
+										<div class="wm_card__body">
+											<p class="wm_card__hero-text">777</p>
+											<a class="wm_card__title" href="#">This is the title.</a>
+											<div class="wm_card__rule"></div>
+											<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Image Background</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="wm_card wm_card--image-bg">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<div class="wm_card__body-content">
+												<p class="wm_card__subtitle">Subtitle</p>
+												<a class="wm_card__title" href="#">Title</a>
+												<div class="wm_card__rule"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Image Background with Border</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="wm_card wm_card--image-bg wm_card--image-border">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<div class="wm_card__body-content">
+												<p class="wm_card__subtitle">Subtitle</p>
+												<a class="wm_card__title" href="#">Title</a>
+												<div class="wm_card__rule"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Image Background with Form</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="wm_card wm_card--image-bg wm_card--image-border">
+										<a class="wm_card__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card__body">
+											<div class="wm_card__body-content">
+												<p class="wm_card__subtitle">Subtitle</p>
+												<a class="wm_card__title" href="#">Title</a>
+												<div class="wm_card__input wm_input-group wm_input-group--closed wm_input-group--submit wm_input-group--reverse">
+													<input class="wm_input-group__text wm_input" type="text" required="required">
+													<label class="wm_input-group__control-label" for="input">Self-Contained Form</label><i class="wm_input-group__bar"></i>
+													<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" href="#"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Circle</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="wm_card wm_card--circle col-sm-4">
+									<a class="wm_card__circle" href="#" >
+										<span class="wm_card__icon fa fa-pied-piper"></span>
+									</a>
+									<div class="wm_card__body">
+										<div class="wm_card__rule"></div>
+										<p class="wm_card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Card Media</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="wm_card wm_card--media col-sm-4">
+									<div class="wm_card__body">
+										<p class="wm_card__title" href="#">Media</p>
+										<p class="wm_card__name">Jethro McGillicuddy</p>
+										<p class="wm_card__job-title">Job Title</p>
+										<p class="wm_card__job-phone">000.000.0000</p>
+										<p class="wm_card__job-email">email@address.com</p>
+										<a class="wm_card__button">Get In-Touch</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card Hero</h3>
+
+						<div class="cd_component__column">
+
+							<div class="wm_card-framed wm_card-framed--hero">
+								<div class="wm_card-framed__frame">
+									<a class="wm_card-framed__image" href="#" >
+										<img src="../assets/images/test.jpg" alt="alt text" />
+									</a>
+									<div class="wm_card-framed__body">
+										<div class="wm_card-framed__body-content">
+											<div class="wm_card-framed__icon-box">
+												<span class="wm_card-framed__icon-box-icon fa fa-pied-piper"></span>
+												<p class="wm_card-framed__icon-box-title">Title</p>
+											</div>
+											<a class="wm_card-framed__title" href="#">This is the title.</a>
+											<p class="wm_card-framed__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card with Icon</h3>
+
+						<div class="cd_component__column">
+							<div class="row">
+								<div class="wm_card-framed wm_card-framed--vertical col-sm-4">
+									<div class="wm_card-framed__frame">
+										<a class="wm_card-framed__image" href="#" >
+											<img src="../assets/images/test.jpg" alt="alt text" />
+										</a>
+										<div class="wm_card-framed__body">
+											<div class="wm_card-framed__icon-box">
+												<span class="wm_card-framed__icon-box-icon fa fa-pied-piper"></span>
+												<p class="wm_card-framed__icon-box-title">Title</p>
+											</div>
+											<a class="wm_card-framed__title" href="#">This is the title.</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card with CTA</h3>
+
+						<div class="cd_component__column">
+							<div class="wm_card-framed">
+								<div class="wm_card-framed__frame">
+									<a class="wm_card-framed__image" href="#" >
+										<img src="../assets/images/test.jpg" alt="alt text" />
+									</a>
+									<div class="wm_card-framed__body">
+										<div class="wm_card-framed__body-content">
+											<a class="wm_card-framed__title" href="#">Let's chat.</a>
+											<p class="wm_card-framed__subtitle">Schedule a designer to contact you.</p>
+											<p class="wm_card-framed__heading">Here's how it works</p>
+											<p class="wm_card-framed__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<a class="wm_card-framed__button">Make an Appointment</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card with Form</h3>
+
+						<div class="cd_component__column">
+							<div class="wm_card-framed">
+								<div class="wm_card-framed__frame">
+									<a class="wm_card-framed__image" href="#" >
+										<img src="../assets/images/test.jpg" alt="alt text" />
+									</a>
+									<div class="wm_card-framed__body">
+										<a class="wm_card-framed__title" href="#">This is the title.</a>
+										<p class="wm_card-framed__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										<div class="wm_card-framed__form">
+											<div class="wm_input-group">
+												<input class="wm_input-group__text wm_input" type="text" required="required">
+												<label class="wm_input-group__control-label" for="input">Open Textfield</label><i class="wm_input-group__bar"></i>
+											</div>
+											<div class="wm_input-group">
+												<input class="wm_input-group__text wm_input" type="text" required="required">
+												<label class="wm_input-group__control-label" for="input">Open Textfield</label><i class="wm_input-group__bar"></i>
+											</div>
+											<div class="wm_input-group">
+												<input class="wm_input-group__text wm_input" type="text" required="required">
+												<label class="wm_input-group__control-label" for="input">Open Textfield</label><i class="wm_input-group__bar"></i>
+											</div>
+										</div>
+										<a class="wm_card-framed__button">Call to Action</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card Reverse</h3>
+
+						<div class="cd_component__column">
+							<div class="wm_card-framed wm_card-framed--reverse">
+								<div class="wm_card-framed__frame">
+
+									<div class="wm_card-framed__body">
+										<div class="wm_card-framed__body-content">
+											<a class="wm_card-framed__title" href="#">This is the title.</a>
+											<p class="wm_card-framed__heading">The best heading</p>
+											<p class="wm_card-framed__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<a class="wm_card-framed__button">Call to Action</a>
+										</div>
+									</div>
+									<a class="wm_card-framed__image" href="#" >
+										<img src="../assets/images/test.jpg" alt="alt text" />
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script></script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card Angle</h3>
+
+						<div class="cd_component__column">
+							<div class="wm_card--arrow wm_card--arrow--left">
+								<div class="wm_card__content">
+									<a class="wm_card__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+								</div>
+								<div class="wm_card__image">
+									<img src="../assets/images/test.jpg" alt="" />
+								</div>
+							</div>
+
+							<div class="wm_card--arrow wm_card--arrow--right">
+								<div class="wm_card__image">
+									<img src="../assets/images/test.jpg" alt="" />
+								</div>
+								<div class="wm_card__content">
+									<a class="wm_card__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Framed Card for Banner</h3>
+
+						<div class="cd_component__column">
+							<div class="wm_card-framed wm_card-framed--banner">
+								<div class="wm_card-framed__frame">
+									<div class="wm_card-framed__body">
+										<div class="wm_heading-group wm_heading-group--large wm_heading-group--white-gold">
+											<h2 class="wm_heading-group__heading">Large Heading Group</h2>
+											<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+										</div>
+										<a class="wm_card-framed__icon-button" href="#"></a>
+										<p class="wm_card-framed__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Media Obect with Icon</h3>
+						<div class="cd_component__column">
+							<div class="wm_media wm_media--icon">
+								<a class="wm_media__interest" href="#" >
+									<span class="wm_media__icon fa fa-pied-piper"></span>
+								</a>
+								<div class="wm_media__body">
+									<a class="wm_media__title" href="#">Title Link</a>
+									<p class="wm_media__text">Lorem ipsum dolor sit amet adipiscing.</p>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Story Header</h3>
+						<div class="cd_component__column">
+							<div class="wm_media wm_media--story">
+								<div class="wm_media__interest" href="#" >
+									<img src="../assets/images/test.jpg"class="wm_media__interest-image"/>
+									<a class="wm_media__interest-button" href="#"></a>
+								</div>
+								<div class="wm_media__body">
+									<div class="wm_heading-group wm_heading-group--small wm_heading-group--black-gold">
+										<h3 class="wm_heading-group__heading">Small Heading Group</h3>
+										<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+									</div>
+									<p class="wm_media__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<span class="wm_expandable-button" href="#">
+										<span class="wm_expandable-button__text">Share</span>
+										<span class="wm_expandable-button__tray">
+											<a class="wm_link"><span class="wm_icon wm_icon--facebook"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--twitter"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--houzz"></spn></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--pinterest"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--instagram"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--youtube"></span></a>
+										</span>
+									</span>
+									<a class="wm_media__button">Call to Action</a>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Product Header</h3>
+						<div class="cd_component__column">
+							<div class="wm_media wm_media--product">
+								<div class="wm_media__interest" href="#">
+
+						            <img src="../assets/images/door.png" data-zoom-image="../assets/images/door--large.png" alt="Door Product Name" id="wm_product-image" class="wm_media__interest-image"/>
+
+								<!--
+									<img src="assets/images/door.png" />
+								-->
+								</div>
+								<div class="wm_media__body">
+									<div class="wm_heading-group wm_heading-group--small wm_heading-group--black-gold">
+										<h3 class="wm_heading-group__heading">Small Heading Group</h3>
+										<h6 class="wm_heading-group__subheading">Subheading 2</h6>
+									</div>
+									<p class="wm_media__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed eiusmod tempor incid dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<span class="wm_expandable-button" href="#">
+										<span class="wm_expandable-button__text">Share</span>
+										<span class="wm_expandable-button__tray">
+											<a class="wm_link"><span class="wm_icon wm_icon--facebook"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--twitter"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--houzz"></spn></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--pinterest"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--instagram"></span></a>
+											<a class="wm_link"><span class="wm_icon wm_icon--youtube"></span></a>
+										</span>
+									</span>
+									<a class="wm_media__button">Call to Action</a>
+								</div>
+								<div class="wm_media__image-zoom">
+									<img src="assets/images/door.png" />
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+								<h4 class="cd_component__markup-display-title">Markup</h4>
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+								<h4 class="cd_component__style-display-title">Styles</h4>
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Framed Content</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Frame</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_frame">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</p>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Mastheads</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Masthead</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_masthead">
+								<div class="wm_masthead__image">
+									<img src="../assets/images/test.jpg" />
+								</div>
+								<div class="wm_masthead__content">
+									<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--full">
+										<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+										<h1 class="wm_heading-group__heading">Main Title</h1>
+										<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+
+					<div class="cd_component">
+						<h3 class="cd_component__title">Masthead Carousel</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_masthead wm_masthead--carousel">
+								<div class="wm_masthead__image wm_masthead__image--carousel">
+									<div class="wm_masthead__image">
+										<img src="../assets/images/test.jpg" />
+										<div class="wm_masthead__content">
+											<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--full">
+												<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+												<h1 class="wm_heading-group__heading">Main Title 1</h1>
+												<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+												<a class="wm_button wm_button--masthead" href="#">Call to Awesome</a>
+											</div>
+										</div>
+									</div>
+									<div class="wm_masthead__image">
+										<img src="../assets/images/test.jpg" />
+										<div class="wm_masthead__content">
+											<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--full">
+												<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+												<h1 class="wm_heading-group__heading">Main Title 2</h1>
+												<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+												<a class="wm_button wm_button--masthead" href="#">Call to Awesome</a>
+											</div>
+										</div>
+									</div>
+									<div class="wm_masthead__image">
+										<img src="../assets/images/test.jpg" />
+										<div class="wm_masthead__content">
+											<div class="wm_heading-group wm_heading-group--masthead wm_heading-group--full">
+												<h6 class="wm_heading-group__subheading">Subheading 7</h6>
+												<h1 class="wm_heading-group__heading">Main Title 3</h1>
+												<p class="wm_heading-group__copy">The fundamental building block of cabinetry design, Wood-Mode offers over 200 different door styles, from traditional to contemporary. Here we share a selection of our most popular doors to inspire your imagination. Your Wood-Mode trained designer will create your perfect combination of door styles, wood species and finishes.</p>
+												<a class="wm_button wm_button--masthead" href="#">Call to Awesome</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Carousels</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Title</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="row">
+								<div class="col-sm-12">
+
+									<div class="wm_carousel wm_carousel--image-preview">
+										<div class="wm_carousel__hero-image wm_carousel__for">
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/any" alt="test image">
+											</div>
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/animals" alt="test image">
+											</div>
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/architecture" alt="test image">
+											</div>
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/nature" alt="test image">
+											</div>
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/tech" alt="test image">
+											</div>
+											<div class="wm_carousel__hero-image-item">
+												<img src="https://placeimg.com/640/480/tech/grayscale" alt="test image">
+											</div>
+										</div>
+										<div class="wm_carousel__preview-image-container">
+											<div class="wm_carousel__preview-image wm_carousel__nav">
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/480/any" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/480/animals" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/480/architecture" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/500/nature" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/480/tech" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+												<div class="wm_carousel__preview-image-item">
+													<div class="wm_carousel__preview-container">
+														<img src="https://placeimg.com/640/480/tech/grayscale" alt="test image">
+													</div>
+													<span class="wm_carousel__bottom-bar"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Banners</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Title</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_banner wm_banner--bronze">
+								<div class="wm_banner__content">
+									<h4 class="wm_banner__title">This is the title for the banner.</h4>
+									<div class="wm_banner__form wm_input-group wm_input-group--closed wm_input-group--submit wm_input-group--reverse-full">
+										<input class="wm_input-group__text wm_input" type="text" required="required">
+										<label class="wm_input-group__control-label" for="input">Self-Contained Form</label><i class="wm_input-group__bar"></i>
+										<a class="wm_input-group__submit-button wm_button--tertiary--icon-only" href="#"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="cd_section--component-group">
+					<h3 class="cd_component-group-title">Tabbed Module</h3>
+					<div class="cd_component">
+						<h3 class="cd_component__title">Title</h3>
+						<div class="cd_component__column cd_column--links">
+							<div class="wm_tabbed-module">
+								<div class="wm_tabbed-module__tabs-container">
+									<div class="wm_tabbed-module__tabs">
+										<div class="wm_tabbed-module__tab active">
+											<div class="wm_tabbed-module__tab-content">
+												<img class="wm_tabbed-module__tab-image" src="/assets/images/wood-mode-logo.svg" alt="test image">
+												<div class="wm_tabbed-module__tab-bar"></div>
+												<h4 class="wm_tabbed-module__tab-title">Tab One Title</h4>
+											</div>
+										</div>
+										<div class="wm_tabbed-module__tab">
+											<div class="wm_tabbed-module__tab-content">
+												<img class="wm_tabbed-module__tab-image" src="/assets/images/wood-mode-logo.svg" alt="test image">
+												<div class="wm_tabbed-module__tab-bar"></div>
+												<h4 class="wm_tabbed-module__tab-title">Tab Two Title</h4>
+											</div>
+										</div>
+										<div class="wm_tabbed-module__tab">
+											<div class="wm_tabbed-module__tab-content">
+												<img class="wm_tabbed-module__tab-image" src="/assets/images/wood-mode-logo.svg" alt="test image">
+												<div class="wm_tabbed-module__tab-bar"></div>
+												<h4 class="wm_tabbed-module__tab-title">Tab Three Title</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wm_tabbed-module__content">
+									<div class="wm_tabbed-module__content-item">
+										<h3>Tab One Content</h3>
+									</div>
+									<div class="wm_tabbed-module__content-item">
+										<h3>Tab Two Content</h3>
+									</div>
+									<div class="wm_tabbed-module__content-item">
+										<h3>Tab Three Content</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cd_component__markup-display">
+							<pre><code class="language-markup"><script> --- </script></code></pre>
+						</div>
+						<div class="cd_component__style-display">
+							<pre><code class="language-css">[Sass]</code></pre>
+						</div>
+					</div>
+				</div>
+
+			</div>
+				<div class="cd_template__component-menu">
+					<div class="cd_component-menu__masthead">
+						<img class="cd_component-menu__client-logo" src="../assets/images/Wood-Mode-Logo.png" />
+						<h4 class="cd_component-menu__client-name">
+							Wood-Mode
+						</h4>
+						<h5 class="cd_component-menu__library-name">
+							Design Library
+						</h5>
+						<p class="cd_component-menu__library-description">
+							The compoponent library and live style guide created for Wood-Mode to utilize in the update and maintenance of <a href="http://wood-mode.com">wood-mode.com</a>.
+						</p>
+					</div>
+					<div class="cd_component-menu__navigation">
 					<h2 class="cd_component-menu__column-header">Patterns</h2>
 					<ul class="cd_component-menu__nav-list">
 						<li class="cd_component-menu__nav-list-item">
@@ -255,24 +2195,60 @@
 						<li class="cd_component-menu__nav-list-item">
 							<a class="cd_component-menu__nav-list-link">Carousels</a>
 						</li>
-						<li class="cd_component-menu__nav-list-item">
-							<a class="cd_component-menu__nav-list-link">Pattern Name</a>
-						</li>
 					</ul>
 				</div>
+				</div>
+
+
+				<div class="wm_section--dealer-locator__map">
+
+					<div id="wm_locator-map"></div>
+
+					<div class="wm_section--dealer-locator__results">
+						<div class="wm_section--dealer-locator__tabs">
+							<ul class="wm_dealer-locator-tabs">
+								<li class="wm_dealer-locator-tabs__tab active"><a id="wm_dealer-locator-tabs--na" class="wm_dealer-locator-tabs__link" onclick="changeRegion(this)">North America</a></li>
+								<li class="wm_dealer-locator-tabs__tab"><a id="wm_dealer-locator-tabs--ca" class="wm_dealer-locator-tabs__link" onclick="changeRegion(this)">Central America</a></li>
+							</ul>
+						</div>
+						<div class="wm_section--dealer-locator__search-form">
+							<div class="wm_section--dealer-locator__search-input-container">
+								<span class="wm_section--dealer-locator__search-input-container-inner"></span>
+								<input class="wm_input wm_zip-input" type="text" id="address" placeholder="Enter Zip Code or City">
+								<a class="wm_search-submit" value="Encode" onclick="focusZIP()"></a>
+							</div>
+							<div class="wm_section--dealer-locator__radius-container">
+								<div class="wm_section--dealer-locator__location-feedback">
+									<p><span id="wm_number-of-stores">0</span> Stores Near "<span id="wm_near-zip-code">00000</span>"</p>
+								</div>
+								<div class="wm_section--dealer-locator__radius-dropdown-container">
+									<form action="#">
+
+										<fieldset>
+											<select name="dealer-locator-radius" id="dealer-locator-radius">
+												<option value="10" selected="selected">Radius</option>
+											</select>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+
+						</div>
+						<ul class="wm_section--dealer-locator__result-list"></ul>
+					</div>
+
+				</div>
+
 			</div>
 		</div>
 		</div>
-
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-		<script src="../bower_components/prism/prism.js" language="SavaScript" type="text/javascript"></script>
-		<script language="JavaScript" type="text/javascript">
-
-			$(document).ready(function() {
-
-			});
-
-		</script>
+		<script src="../bower_components/jquery/dist/jquery.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../bower_components/prism/prism.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../bower_components/slick-carousel/slick/slick.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../assets/scripts/js/carousel-min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../assets/scripts/js/product-zoom-min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../assets/vendor/elevatezoom/jquery.elevatezoom.js" language="JavaScript" type="text/javascript"></script>
+		<script src="../assets/scripts/js/dealer-locator-min.js" language="JavaScript" type="text/javascript"></script>
 
 	</body>
 </html>

@@ -13,8 +13,33 @@
 	(http://atomicdesign.bradfrost.com/) to organize absolutely anything.
 
 ************************************/
-@import url(../../bower_components/font-awesome/css/font-awesome.min.css);
-@import url(../../bower_components/normalize-css/normalize.css);
+/*
+@font-face {
+    font-family: 'apercu';
+    src: url('../fonts/apercu-light.eot');
+    src: url('../fonts/apercu-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/apercu-light.woff') format('woff'),
+         url('../fonts/apercu-light.woff2') format('woff2'),
+         url('../fonts/apercu-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@import url(vendor/normalize-css/normalize.css);
+@import url(../vendor/prism/themes/prism.css);
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'woodmode-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -81,11 +106,11 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 10px;
+  font-size: 15px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   color: #333333; }
 
 .sr-only {
@@ -112,8 +137,8 @@ body {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 9px;
+  padding-right: 9px; }
   .container:before, .container:after {
     content: " ";
     display: table; }
@@ -121,28 +146,28 @@ body {
     clear: both; }
   @media (min-width: 768px) {
     .container {
-      width: 750px; } }
+      width: 738px; } }
   @media (min-width: 992px) {
     .container {
-      width: 970px; } }
+      width: 958px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1170px; } }
+      width: 1158px; } }
 
-.container-fluid, .cd_stage {
+.container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
-  .container-fluid:before, .cd_stage:before, .container-fluid:after, .cd_stage:after {
+  padding-left: 9px;
+  padding-right: 9px; }
+  .container-fluid:before, .container-fluid:after {
     content: " ";
     display: table; }
-  .container-fluid:after, .cd_stage:after {
+  .container-fluid:after {
     clear: both; }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -9px;
+  margin-right: -9px; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -152,8 +177,8 @@ body {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 9px;
+  padding-right: 9px; }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left; }
@@ -868,12 +893,37 @@ FUNCTIONS
 	Component Constructor
 
 ************************************/
+/******************************
+
+	RESPONSIVE TYPE ALGORITM
+
+******************************/
+/******************************
+
+	CONSTRUCTOR SUPPORT MIXINS
+
+******************************/
+/******************************
+
+	LAYOUT TOOLS
+
+******************************/
+/******************************
+
+	THEME TOOLS
+
+******************************/
 /*******
 
 	Cordial Framework
 	Theme Configuration
 
 *******/
+/************************************
+
+	SCALE
+
+************************************/
 /************************************
 
 	TYPOGRAPHY
@@ -899,57 +949,6 @@ FUNCTIONS
 	DIMENSION
 
 ************************************/
-/*
-
-	$type-sizes
-		> type-size name
-			> screen-size name
-
-	primarily utilized to create type size classes found in _type-sizes.scss
-
-*/
-@font-face {
-  font-family: 'apercu';
-  src: url("../../../../../fonts/apercu-light.eot");
-  src: url("../../../../../fonts/apercu-light.eot?#iefix") format("embedded-opentype"), url("../../../../../fonts/apercu-light.woff") format("woff"), url("../../../../../fonts/apercu-light.woff2") format("woff2"), url("../../../../../fonts/apercu-light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'eksell';
-  src: url("../../../../../fonts/EksellDisplayWeb-Large.eot");
-  src: url("../../../../../fonts/EksellDisplayWeb-Large.woff") format("woff"), url("../../../../../fonts/EksellDisplayWeb-Large.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'condiut-extra-light';
-  src: url("../../../../../fonts/ConduitExLtITC.ttf");
-  src: url("../../../../../fonts/ConduitExLtITC.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'condiut-light';
-  src: url("../../../../../fonts/ConduitITC.ttf");
-  src: url("../../../../../fonts/ConduitITC.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'condiut-regular';
-  src: url("../../../../../fonts/ConduitRegITC.ttf");
-  src: url("../../../../../fonts/ConduitRegITC.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'condiut-medium';
-  src: url("../../../../../fonts/ConduitMdITC.ttf");
-  src: url("../../../../../fonts/ConduitMdITC.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
 /*******
 
 	Cordial Framework
@@ -957,700 +956,162 @@ FUNCTIONS
 
 *******/
 html {
-  font-size: 16px !important;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
   font-weight: normal; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+html, body, #fullheight {
+  min-height: 100% !important;
+  height: 100%; }
+
+/*
+@font-face {
+    font-family: 'apercu';
+    src: url('../fonts/apercu-light.eot');
+    src: url('../fonts/apercu-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/apercu-light.woff') format('woff'),
+         url('../fonts/apercu-light.woff2') format('woff2'),
+         url('../fonts/apercu-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'woodmode-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /************************************
 
 	Atoms
 
 ************************************/
-.badge {
+/*
+@import "patterns/alerts";
+@import "patterns/badges";
+@import "patterns/blockquote";
+@import "patterns/buttons";
+@import "patterns/headings";
+@import "patterns/icons";
+@import "patterns/images";
+@import "patterns/inputs";
+@import "patterns/labels";
+@import "patterns/links";
+@import "patterns/rule";
+*/
+.text, p, .test-default {
   /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
+  line-height: 1.4;
   display: block;
-  position: absolute;
-  top: -4px;
-  right: 0;
   margin: 0;
   padding: 0;
-  height: 0.75rem;
-  width: 0.75rem;
-  text-align: center;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  border: none;
-  border-radius: 50%;
   white-space: normal;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  font-size: 0.6rem;
-  line-height: 0.75rem;
-  color: #ffffff; }
-
-.blockquote {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
-  display: block;
-  margin: 0 0 3.8889rem 0;
-  padding: 0.777rem 0 0 1.6111rem;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: inherit;
+  color: black;
   text-align: left;
   vertical-align: inherit;
   touch-action: auto;
   cursor: inherit;
-  background-image: none;
-  background-color: transparent;
-  border: none #777777;
-  border-left: 0.2222rem solid #2F83B3;
-  white-space: normal;
-  font-size: 2.2222rem;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  color: #2F83B3; }
-
-button,
-.button {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
-  display: inline-block;
-  margin: 0;
-  padding: 0.8889rem 1.3889rem;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  font-weight: inherit;
-  text-align: center;
-  text-decoration: none;
-  color: #2F83B3;
   background-image: none;
   background-color: rgba(255, 255, 255, 0);
-  border: 0.15rem solid;
-  border-radius: 0.25rem;
-  touch-action: manipulation;
-  cursor: pointer;
-  transition: 150ms;
-  :hover: (background-color: #1E2E3C, text-decoration: none, color: #ffffff, border: 0.15rem solid);
-  :active: (background-color: #16212b, color: #ffffff, outline: none); }
-  button:hover,
-  .button:hover {
-    background-color: #1E2E3C;
-    text-decoration: none;
-    color: #ffffff;
-    border: 0.15rem solid; }
-  button:active,
-  .button:active {
-    background-color: #16212b;
-    color: #ffffff;
-    outline: none; }
-  .cd_stage .cd_component-menu__nav-list-link {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8rem;
-    line-height: 0.88rem;
-    /* activates/deactivates responsive type */
-    display: block;
-    width: 100%;
-    padding: 0.25rem 0;
-    text-align: left;
-    border-radius: 0.1111rem;
-    border: 1px solid rgba(255, 255, 255, 0);
-    :hover: (color: #24658b);
-    :active: (border-bottom: 1px solid #2F83B3, border-top: 1px solid #2F83B3, color: #24658b); }
-    .cd_stage .cd_component-menu__nav-list-link:hover {
-      color: #24658b; }
-    .cd_stage .cd_component-menu__nav-list-link:active {
-      border-bottom: 1px solid #2F83B3;
-      border-top: 1px solid #2F83B3;
-      color: #24658b; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 0.8rem;
-        line-height: 0.96rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 0.875rem;
-        line-height: 1.05rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 1rem;
-        line-height: 1.3rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 1.1rem;
-        line-height: 1.54rem; } }
-  .cd_stage .cd_component-menu__nav-list-link {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8rem;
-    line-height: 0.88rem;
-    /* activates/deactivates responsive type */
-    :after: (font-family: fontawesome, margin-left: 0.5rem, content: "", float: right); }
-    .cd_stage .cd_component-menu__nav-list-link:after {
-      font-family: fontawesome;
-      margin-left: 0.5rem;
-      float: right; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 0.8rem;
-        line-height: 0.96rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 0.875rem;
-        line-height: 1.05rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 1rem;
-        line-height: 1.3rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_component-menu__nav-list-link {
-        font-size: 1.1rem;
-        line-height: 1.54rem; } }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  font-size: 1rem;
-  line-height: 1.1rem;
-  /* activates/deactivates responsive type */
-  display: block;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  background-color: transparent;
-  border: none #777777;
-  white-space: normal;
-  font-family: ProximaNovaS, Times New Roman, sans-serif;
-  color: #1E2E3C; }
+  border: none #848484; }
+  @media screen and (min-width: 0px) {
+    .text, p, .test-default {
+      font-size: 0.8rem; } }
   @media screen and (min-width: 576px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 1rem;
-      line-height: 1.1rem; } }
+    .text, p, .test-default {
+      font-size: 0.8rem; } }
   @media screen and (min-width: 768px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 1rem;
-      line-height: 1.1rem; } }
+    .text, p, .test-default {
+      font-size: 0.9rem; } }
   @media screen and (min-width: 992px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 1rem;
-      line-height: 1.1rem; } }
+    .text, p, .test-default {
+      font-size: 1rem; } }
   @media screen and (min-width: 1200px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 1rem;
-      line-height: 1.1rem; } }
-  .cd_stage .cd_main-content .cd_header__title, .cd_font-list__item .cd_font__big-a {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 3rem;
-    line-height: 3.3rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    font-family: impact, sans-serif;
-    letter-spacing: 0.1rem; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_main-content .cd_header__title, .cd_font-list__item .cd_font__big-a {
-        font-size: 3rem;
-        line-height: 3.3rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_main-content .cd_header__title, .cd_font-list__item .cd_font__big-a {
-        font-size: 3.5rem;
-        line-height: 3.85rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_main-content .cd_header__title, .cd_font-list__item .cd_font__big-a {
-        font-size: 4rem;
-        line-height: 4.4rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_main-content .cd_header__title, .cd_font-list__item .cd_font__big-a {
-        font-size: 4.4rem;
-        line-height: 4.84rem; } }
-  .cd_stage .cd_main-content .cd_component-group__title {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 1.5rem;
-    line-height: 1.65rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 1rem;
-    font-family: proxima nova, helvetica, arial, sans-serif; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_main-content .cd_component-group__title {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_main-content .cd_component-group__title {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_main-content .cd_component-group__title {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_main-content .cd_component-group__title {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-  .cd_stage .cd_component-menu__client-name, .cd_stage .cd_component-menu__column-header {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 1rem;
-    line-height: 1.1rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 1rem;
-    font-family: proxima nova, helvetica, arial, sans-serif; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_component-menu__client-name, .cd_stage .cd_component-menu__column-header {
-        font-size: 1rem;
-        line-height: 1.1rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_component-menu__client-name, .cd_stage .cd_component-menu__column-header {
-        font-size: 1rem;
-        line-height: 1.1rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_component-menu__client-name, .cd_stage .cd_component-menu__column-header {
-        font-size: 1rem;
-        line-height: 1.1rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_component-menu__client-name, .cd_stage .cd_component-menu__column-header {
-        font-size: 1rem;
-        line-height: 1.1rem; } }
-  .cd_stage .cd_main-content .cd_component-group .cd_component__title, .cd_color-list__item .cd_color__title, .cd_font-list__item .cd_font__title {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8889rem;
-    line-height: 0.97779rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 0.7778rem;
-    font-family: proxima nova, helvetica, arial, sans-serif;
-    letter-spacing: 0.1rem; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_main-content .cd_component-group .cd_component__title, .cd_color-list__item .cd_color__title, .cd_font-list__item .cd_font__title {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_main-content .cd_component-group .cd_component__title, .cd_color-list__item .cd_color__title, .cd_font-list__item .cd_font__title {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_main-content .cd_component-group .cd_component__title, .cd_color-list__item .cd_color__title, .cd_font-list__item .cd_font__title {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_main-content .cd_component-group .cd_component__title, .cd_color-list__item .cd_color__title, .cd_font-list__item .cd_font__title {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-  .cd_stage .cd_component-menu__library-name {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.7rem;
-    line-height: 0.77rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 0.7778rem;
-    font-family: proxima nova, helvetica, arial, sans-serif;
-    letter-spacing: 0.1rem; }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_component-menu__library-name {
-        font-size: 0.7rem;
-        line-height: 0.77rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_component-menu__library-name {
-        font-size: 0.7rem;
-        line-height: 0.77rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_component-menu__library-name {
-        font-size: 0.7rem;
-        line-height: 0.77rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_component-menu__library-name {
-        font-size: 0.7rem;
-        line-height: 0.77rem; } }
-  h1 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 3rem;
-    line-height: 3.3rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    font-family: ProximaNovaS, Times New Roman, sans-serif; }
-    @media screen and (min-width: 576px) {
-      h1 {
-        font-size: 3rem;
-        line-height: 3.3rem; } }
-    @media screen and (min-width: 768px) {
-      h1 {
-        font-size: 3.5rem;
-        line-height: 3.85rem; } }
-    @media screen and (min-width: 992px) {
-      h1 {
-        font-size: 4rem;
-        line-height: 4.4rem; } }
-    @media screen and (min-width: 1200px) {
-      h1 {
-        font-size: 4.4rem;
-        line-height: 4.84rem; } }
-  
-  h2 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 1.7778rem;
-    line-height: 1.95558rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 1.5556rem; }
-    @media screen and (min-width: 576px) {
-      
-      h2 {
-        font-size: 1.7778rem;
-        line-height: 1.95558rem; } }
-    @media screen and (min-width: 768px) {
-      
-      h2 {
-        font-size: 1.8rem;
-        line-height: 1.98rem; } }
-    @media screen and (min-width: 992px) {
-      
-      h2 {
-        font-size: 2rem;
-        line-height: 2.2rem; } }
-    @media screen and (min-width: 1200px) {
-      
-      h2 {
-        font-size: 2.2rem;
-        line-height: 2.42rem; } }
-  
-  h3 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 1.5rem;
-    line-height: 1.65rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 1rem; }
-    @media screen and (min-width: 576px) {
-      
-      h3 {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 768px) {
-      
-      h3 {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 992px) {
-      
-      h3 {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-    @media screen and (min-width: 1200px) {
-      
-      h3 {
-        font-size: 1.5rem;
-        line-height: 1.65rem; } }
-  
-  h4 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8889rem;
-    line-height: 0.97779rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 0.7778rem; }
-    @media screen and (min-width: 576px) {
-      
-      h4 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 768px) {
-      
-      h4 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 992px) {
-      
-      h4 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 1200px) {
-      
-      h4 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-  
-  h5 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8889rem;
-    line-height: 0.97779rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 0.7778rem; }
-    @media screen and (min-width: 576px) {
-      
-      h5 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 768px) {
-      
-      h5 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 992px) {
-      
-      h5 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 1200px) {
-      
-      h5 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-  
-  h6 {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8889rem;
-    line-height: 0.97779rem;
-    /* activates/deactivates responsive type */
-    color: #1E2E3C;
-    margin-bottom: 0.7778rem; }
-    @media screen and (min-width: 576px) {
-      
-      h6 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 768px) {
-      
-      h6 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 992px) {
-      
-      h6 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
-    @media screen and (min-width: 1200px) {
-      
-      h6 {
-        font-size: 0.8889rem;
-        line-height: 0.97779rem; } }
+    .text, p, .test-default {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1350px) {
+    .text, p, .test-default {
+      font-size: 1.1rem; } }
 
-img {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
+.test-modifier {
+  line-height: 1.4;
   display: block;
   margin: 0;
   padding: 0;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  background-color: transparent;
-  border: none;
   white-space: normal;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  font-size: 1;
-  color: #454b50;
-  width: 100%;
-  height: auto; }
-
-input {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #333333;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: 100ms;
-  -o-transition: 100ms;
-  transition: 100ms;
-  box-sizing: border-box;
-  :hover: (transition: 100ms);
-  :focus: (outline-color: none, outline: none, border: 1px solid #2F83B3); }
-  input:hover {
-    transition: 100ms; }
-  input:focus {
-    outline-color: none;
-    outline: none;
-    border: 1px solid #2F83B3; }
-
-.media .media__body .media__body-inner .media__label {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  font-size: 0.7rem;
-  line-height: 0.77rem;
-  /* activates/deactivates responsive type */
-  display: inline-block;
-  padding: 0.3333rem 0.4444rem 0.222rem 0.4444rem;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  cursor: inherit;
-  background-image: none;
-  background-color: #757E86;
-  border: none;
-  white-space: normal;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  color: #ffffff; }
-  @media screen and (min-width: 576px) {
-    .media .media__body .media__body-inner .media__label {
-      font-size: 0.7rem;
-      line-height: 0.77rem; } }
-  @media screen and (min-width: 768px) {
-    .media .media__body .media__body-inner .media__label {
-      font-size: 0.7rem;
-      line-height: 0.84rem; } }
-  @media screen and (min-width: 992px) {
-    .media .media__body .media__body-inner .media__label {
-      font-size: 0.7rem;
-      line-height: 0.91rem; } }
-  @media screen and (min-width: 1200px) {
-    .media .media__body .media__body-inner .media__label {
-      font-size: 0.7rem;
-      line-height: 0.98rem; } }
-
-a, .media .media__body .media__body-inner .media__utility-link-list .media__utility-link-item .media__utility-links {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
-  display: inline;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  vertical-align: inherit;
-  touch-action: auto;
-  background-image: none;
-  background-color: transparent;
-  border: none #777777;
-  transition: 150ms;
-  white-space: normal;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  color: #2F83B3;
-  cursor: pointer;
-  text-decoration: none;
-  :hover: (color: #469dcf, text-decoration: none);
-  :active: (color: #469dcf); }
-  a:hover, .media .media__body .media__body-inner .media__utility-link-list .media__utility-link-item .media__utility-links:hover {
-    color: #469dcf;
-    text-decoration: none; }
-  a:active, .media .media__body .media__body-inner .media__utility-link-list .media__utility-link-item .media__utility-links:active {
-    color: #469dcf; }
-  hr {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    /* activates/deactivates responsive type */
-    border-top: 1px solid #aaaaaa;
-    margin: 1rem 0; }
-
-p,
-.text {
-  /* creates all pseudo classes & elements if passed in $modifier */
-  /* activates/deactivates responsive type */
-  display: block;
-  margin: 0;
-  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: inherit;
+  color: #b59b6b;
   text-align: left;
   vertical-align: inherit;
   touch-action: auto;
   cursor: inherit;
   background-image: none;
-  background-color: transparent;
-  border: none #777777;
-  white-space: normal;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  color: #757E86; }
-  .cd_font-list__item .cd_font__alphabet-lower, .cd_font-list__item .cd_font__alphabet-upper {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.8rem;
-    line-height: 0.88rem;
-    /* activates/deactivates responsive type */ }
-    @media screen and (min-width: 576px) {
-      .cd_font-list__item .cd_font__alphabet-lower, .cd_font-list__item .cd_font__alphabet-upper {
-        font-size: 0.8rem;
-        line-height: 0.96rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_font-list__item .cd_font__alphabet-lower, .cd_font-list__item .cd_font__alphabet-upper {
-        font-size: 0.875rem;
-        line-height: 1.05rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_font-list__item .cd_font__alphabet-lower, .cd_font-list__item .cd_font__alphabet-upper {
-        font-size: 1rem;
-        line-height: 1.3rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_font-list__item .cd_font__alphabet-lower, .cd_font-list__item .cd_font__alphabet-upper {
-        font-size: 1.1rem;
-        line-height: 1.54rem; } }
-  .cd_stage .cd_component-menu__library-description {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    font-size: 0.75rem;
-    line-height: 0.825rem;
-    /* activates/deactivates responsive type */ }
-    @media screen and (min-width: 576px) {
-      .cd_stage .cd_component-menu__library-description {
-        font-size: 0.75rem;
-        line-height: 0.825rem; } }
-    @media screen and (min-width: 768px) {
-      .cd_stage .cd_component-menu__library-description {
-        font-size: 0.75rem;
-        line-height: 0.9rem; } }
-    @media screen and (min-width: 992px) {
-      .cd_stage .cd_component-menu__library-description {
-        font-size: 0.75rem;
-        line-height: 0.975rem; } }
-    @media screen and (min-width: 1200px) {
-      .cd_stage .cd_component-menu__library-description {
-        font-size: 0.75rem;
-        line-height: 1.05rem; } }
-  pre {
-    /* creates all pseudo classes & elements if passed in $modifier */
-    /* activates/deactivates responsive type */
-    font-family: courier, monospace;
-    white-space: pre; }
+  background-color: purple;
+  border: none #848484;
+  letter-spacing: 3px; }
+  @media screen and (min-width: 0px) {
+    .test-modifier {
+      font-size: 1.33328rem; } }
+  @media screen and (min-width: 576px) {
+    .test-modifier {
+      font-size: 1.33328rem; } }
+  @media screen and (min-width: 768px) {
+    .test-modifier {
+      font-size: 1.49994rem; } }
+  @media screen and (min-width: 992px) {
+    .test-modifier {
+      font-size: 1.6666rem; } }
+  @media screen and (min-width: 1200px) {
+    .test-modifier {
+      font-size: 1.6666rem; } }
+  @media screen and (min-width: 1350px) {
+    .test-modifier {
+      font-size: 1.83326rem; } }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.test-modifier2 {
+  display: block;
   margin: 0;
   padding: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  font-size: inherit;
-  color: inherit;
-  font-weight: normal; }
+  white-space: normal;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #b59b6b;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: brown;
+  border: none #848484;
+  letter-spacing: 3px;
+  font-size: 4rem; }
 
-a:visited {
-  color: inherit; }
-
-p,
+/*
+@import "badges";
+@import "blockquote";
+@import "buttons";
+@import "headings";
+@import "icons";
+@import "images";
+@import "inputs";
+@import "links";
+@import "rule";
+*/
 .text {
   margin: 0;
   padding: 0;
@@ -1658,332 +1119,19 @@ p,
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  font-weight: normal;
-  margin-bottom: 1rem; }
+  font-weight: normal; }
+  p {
+    margin-bottom: 1rem; }
 
-/************************************
-
-	Molecules
-
-************************************/
-.media {
-  margin: 0;
-  transition: 150ms;
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1; }
-  .media .media__interest {
-    float: left;
-    margin-right: 1rem; }
-    .media .media__interest .media__interest-image {
-      display: block; }
-  .media .media__body {
-    overflow: hidden;
-    _overflow: visible;
-    zoom: 1; }
-    .media .media__body .media__body-inner .media__label-featured {
-      display: none; }
-    .media .media__body .media__body-inner .media__date {
-      display: inline-block; }
-    .media .media__body .media__body-inner .media__utility-link-list {
-      display: inline-block;
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-      .media .media__body .media__body-inner .media__utility-link-list .media__utility-link-item {
-        display: inline-block; }
-  .media--interest-left {
-    float: right;
-    margin-right: 1rem;
-    margin-left: 1rem; }
-  .media--nested {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem; }
-
-input[type=radio] {
-  line-height: 0.8889rem;
-  font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
-  color: #757E86; }
-
-/************************************
-
-	Organisms
-
-************************************/
 /************************************
 
 	Pages
 
 ************************************/
-.cd_stage::after {
-  content: " ";
-  display: table;
-  clear: both; }
-
-.cd_stage .cd_template--component-library {
-  margin-left: -15px;
-  margin-right: -15px; }
-  .cd_stage .cd_template--component-library::after {
-    content: " ";
-    display: table;
-    clear: both; }
-
-.cd_stage .cd_main-content {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-left: 0;
-  padding-right: 0; }
-  @media (min-width: 768px) {
-    .cd_stage .cd_main-content {
-      float: left;
-      width: 75%; } }
-  @media (min-width: 768px) {
-    .cd_stage .cd_main-content {
-      left: 25%; } }
-  @media (min-width: 1200px) {
-    .cd_stage .cd_main-content {
-      float: left;
-      width: 83.3333333333%; } }
-  @media (min-width: 1200px) {
-    .cd_stage .cd_main-content {
-      left: 16.6666666667%; } }
-  @media (min-width: 768px) {
-    .cd_stage .cd_main-content {
-      padding-left: 15px;
-      padding-right: 15px; } }
-  .cd_stage .cd_main-content .cd_header {
-    height: 150px;
-    background-color: #2F83B3;
-    position: relative; }
-    .cd_stage .cd_main-content .cd_header__title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      text-align: center;
-      color: #ffffff; }
-  .cd_stage .cd_main-content .cd_section--abstract .cd_summary {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .cd_stage .cd_main-content .cd_section--abstract .cd_summary {
-        float: left;
-        width: 100%; } }
-  .cd_stage .cd_main-content .cd_component-group {
-    margin: 1.5rem 0; }
-    .cd_stage .cd_main-content .cd_component-group__title {
-      position: relative;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      background-color: #e6e5e5; }
-      @media (min-width: 768px) {
-        .cd_stage .cd_main-content .cd_component-group__title {
-          float: left;
-          width: 100%; } }
-    .cd_stage .cd_main-content .cd_component-group .cd_component {
-      margin: 2rem 0; }
-      .cd_stage .cd_main-content .cd_component-group .cd_component__title {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
-        text-transform: uppercase;
-        font-weight: bold; }
-        @media (min-width: 768px) {
-          .cd_stage .cd_main-content .cd_component-group .cd_component__title {
-            float: left;
-            width: 100%; } }
-      .cd_stage .cd_main-content .cd_component-group .cd_component__instance {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px; }
-        @media (min-width: 768px) {
-          .cd_stage .cd_main-content .cd_component-group .cd_component__instance {
-            float: left;
-            width: 100%; } }
-      .cd_stage .cd_main-content .cd_component-group .cd_component__markup-display {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px; }
-        @media (min-width: 768px) {
-          .cd_stage .cd_main-content .cd_component-group .cd_component__markup-display {
-            float: left;
-            width: 100%; } }
-      .cd_stage .cd_main-content .cd_component-group .cd_component__style-display {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px; }
-        @media (min-width: 768px) {
-          .cd_stage .cd_main-content .cd_component-group .cd_component__style-display {
-            float: left;
-            width: 100%; } }
-
-.cd_stage .cd_component-menu {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 768px) {
-    .cd_stage .cd_component-menu {
-      float: left;
-      width: 25%; } }
-  @media (min-width: 768px) {
-    .cd_stage .cd_component-menu {
-      right: 75%; } }
-  @media (min-width: 1200px) {
-    .cd_stage .cd_component-menu {
-      float: left;
-      width: 16.6666666667%; } }
-  @media (min-width: 1200px) {
-    .cd_stage .cd_component-menu {
-      right: 83.3333333333%; } }
-  .cd_stage .cd_component-menu__masthead {
-    margin: 1rem 0; }
-  .cd_stage .cd_component-menu__client-logo {
-    margin-bottom: 1rem; }
-  .cd_stage .cd_component-menu__client-name {
-    margin-bottom: 0;
-    font-weight: bold; }
-  .cd_stage .cd_component-menu__library-name {
-    letter-spacing: normal; }
-  .cd_stage .cd_component-menu__navigation {
-    margin-top: 1.5rem; }
-  .cd_stage .cd_component-menu__column-header {
-    margin-bottom: 0.5rem; }
-  .cd_stage .cd_component-menu__nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    .cd_stage .cd_component-menu__nav-list-item {
-      margin-bottom: 0.5rem;
-      width: 100%; }
-    .cd_stage .cd_component-menu__nav-list-link::after {
-      content: "\f107";
-      font-weight: 100; }
-    .cd_stage .cd_component-menu__nav-list-link.active {
-      color: #24658b;
-      border-bottom: 1px solid #2F83B3;
-      border-top: 1px solid #2F83B3; }
-      .cd_stage .cd_component-menu__nav-list-link.active::after {
-        content: "\f106";
-        font-weight: 100; }
-
-.cd_color-list {
-  margin-left: -15px;
-  margin-right: -15px;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  .cd_color-list::after {
-    content: " ";
-    display: table;
-    clear: both; }
-  .cd_color-list__item {
-    position: relative;
-    float: left;
-    width: 50%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 0; }
-    @media (min-width: 768px) {
-      .cd_color-list__item {
-        float: left;
-        width: 33.3333333333%; } }
-    @media (min-width: 992px) {
-      .cd_color-list__item {
-        float: left;
-        width: 25%; } }
-    @media (min-width: 1200px) {
-      .cd_color-list__item {
-        float: left;
-        width: 16.6666666667%; } }
-    .cd_color-list__item .cd_color {
-      text-align: center; }
-      .cd_color-list__item .cd_color__block {
-        width: 100%;
-        height: 100px; }
-        .cd_color-list__item .cd_color__block--brand-primary {
-          background-color: #2F83B3; }
-        .cd_color-list__item .cd_color__block--brand-secondary {
-          background-color: #1E2E3C; }
-      .cd_color-list__item .cd_color__title {
-        margin: 0.5rem 0;
-        font-weight: 600;
-        letter-spacing: normal;
-        text-align: center; }
-      .cd_color-list__item .cd_color__hex-value {
-        text-align: center;
-        margin-bottom: 0; }
-      .cd_color-list__item .cd_color__rgba-value {
-        text-align: center;
-        margin-bottom: 0; }
-
-.cd_font-list {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  .cd_font-list__item {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 0; }
-    @media (min-width: 768px) {
-      .cd_font-list__item {
-        float: left;
-        width: 50%; } }
-    .cd_font-list__item .cd_font__alphabet-lower {
-      margin-bottom: 0; }
-    .cd_font-list__item .cd_font__alphabet-upper {
-      margin-bottom: 0;
-      text-transform: uppercase; }
-
 /************************************
 
 	Templates
 
 ************************************/
-.cd_stage .cd_main-content .cd_section--abstract, .cd_stage .cd_main-content .cd_component-group {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin: 2rem 0; }
-  .cd_stage .cd_main-content .cd_section--abstract::after, .cd_stage .cd_main-content .cd_component-group::after {
-    content: " ";
-    display: table;
-    clear: both; }
-  .cd_stage .cd_main-content .cd_section--abstract::after, .cd_stage .cd_main-content .cd_component-group::after {
-    content: " ";
-    display: table;
-    clear: both; }
+
+/*# sourceMappingURL=app.css.map */

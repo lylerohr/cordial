@@ -14,27 +14,26 @@ $input-patterns: (
 	color: #555,
 	background-color: #fff,
 	background-image: none,
-	border: border(hairline, gray-dark),
+	border: border(hairline, clear),
 	border-radius: 0px,
 	-webkit-box-shadow: none,
 	box-shadow: none,
-	-webkit-transition: transition(fast),
-	-o-transition: transition(fast),
-	transition: transition(fast),
+	-webkit-transition: transition(slow),
+	-o-transition: transition(slow),
+	transition: transition(slow),
 	box-sizing: border-box,
 	":hover": (
-		transition: transition(fast),
+		transition: transition(slow),
 	),
 	":active": (
 	),
 	":focus": (
 		outline-color: none,
 		outline: none,
-		border: border(hairline, brand-primary),
 	),
 	elements: (),
 	modifiers: (),
 );
 
 // Initialize the %input placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-@include construct($input-patterns);
+//@include construct($input-patterns);

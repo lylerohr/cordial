@@ -1,0 +1,1 @@
+!function(){if("undefined"!=typeof self&&self.Prism||"undefined"!=typeof global&&global.Prism){var s={classMap:{}};Prism.plugins.customClass={map:function i(n){s.classMap=n},prefix:function i(n){s.prefixString=n}},Prism.hooks.add("wrap",function(i){(s.classMap||s.prefixString)&&(i.classes=i.classes.map(function(i){return(s.prefixString||"")+(s.classMap[i]||i)}))})}}();

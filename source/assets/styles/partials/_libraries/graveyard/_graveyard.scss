@@ -1,0 +1,28 @@
+/*
+//@mixin fontface($default: (), $fontname) {
+//	$default: extend((
+//		font-family: '#{$fontname}',
+//		src: url('../fonts/#{$fontname}.eot'),
+//		src: url('../fonts/#{$fontname}.eot?#iefix') format('embedded-opentype'), url('fonts/#{$fontname}.woff') format('woff'), url('fonts/#{$fontname}.ttf') format('truetype'),
+//		font-weight: normal,
+//		font-style: normal,
+//	), $default);
+//}
+
+
+
+
+// BEM
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+	  @content;
+  }
+}
+
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}
+
+*/

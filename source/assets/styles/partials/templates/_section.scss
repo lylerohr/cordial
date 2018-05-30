@@ -1,6 +1,7 @@
-%section {
+%#{$class-prefix}section {
 	@include make-row();
 	margin: margin(extra-large) 0;
+	background-color: green;
 
 	@include clearfix;
 }
