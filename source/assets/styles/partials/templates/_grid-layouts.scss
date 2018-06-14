@@ -1,4 +1,4 @@
-%#{$class-prefix}grid {
+%#{$pre}grid {
 	&--1-col {
 		.wm_grid-item {
 			@include make-sm-column(12);

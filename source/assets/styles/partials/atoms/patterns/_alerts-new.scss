@@ -1,0 +1,40 @@
+// ALERT PATTERNS
+
+// @extend %alert
+$alert-patterns: (
+	pattern-config: (
+		responsive-type: true,
+		size: base,
+		name: 'alert',
+		type-style: text,
+	),
+	pattern: (
+		display: block,
+		margin: margin(base),
+		padding: 0,
+		white-space: normal,
+		font-family: font-family(text),
+		color: color(gray, extra-dark),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		":hover": (),
+		":active": (),
+		"::before": (),
+		"::after": (),
+	),
+	modifiers: (
+		"--test": (
+			pattern-config: (
+				responsive-type: true,
+				size: large,
+				type-style: text,
+			),
+		),
+	),
+);
+@include construct($alert-patterns);
